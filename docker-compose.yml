@@ -1,5 +1,5 @@
 version: '3.8'
-name: zatochka
+name: sharptime
 services:
   backend:
     env_file: ./docker/.env
@@ -21,7 +21,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - zatochka_db:/var/lib/postgresql/data:cached
+      - sharptime_db:/var/lib/postgresql/data:cached
     environment:
       POSTGRES_DB: common
       POSTGRES_USER: pguser
@@ -42,4 +42,4 @@ services:
       - backend
 
 volumes:
-  zatochka_db:
+  sharptime_db:
