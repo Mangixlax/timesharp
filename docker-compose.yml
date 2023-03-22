@@ -1,5 +1,5 @@
 version: '3.8'
-name: sharptime
+name: timesharp
 services:
   backend:
     env_file: ./docker/.env
@@ -21,7 +21,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - sharptime_db:/var/lib/postgresql/data:cached
+      - timesharp_db:/var/lib/postgresql/data:cached
     environment:
       POSTGRES_DB: common
       POSTGRES_USER: pguser
@@ -42,4 +42,4 @@ services:
       - backend
 
 volumes:
-  sharptime_db:
+  timesharp_db:
