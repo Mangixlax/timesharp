@@ -106,12 +106,12 @@ $assets-url: "../../assets";
 }
 
 .header-navbar__nav-link.header-navbar__nav-link--active {
-  color: #1646bb;
+  color: #454545;
   font-weight: 700
 }
 
 .header-navbar__nav-link:hover:not(.header-navbar__nav-link--active) {
-  color: #1646bb
+  color: #454545
 }
 
 .logo {
@@ -195,7 +195,8 @@ $assets-url: "../../assets";
   -webkit-align-items: flex-end;
   -moz-box-align: end;
   -ms-flex-align: end;
-  align-items: flex-end
+  align-items: center;
+  padding-top: 4px;
 }
 
 .logo-panel__nav-item {
@@ -212,7 +213,7 @@ $assets-url: "../../assets";
 }
 
 .logo-panel__nav-item.logo-panel__nav-item--active {
-  color: #1646bb
+  color: #454545
 }
 
 .logo-panel__nav-item:not(:last-child) {
@@ -220,11 +221,11 @@ $assets-url: "../../assets";
 }
 
 .logo-panel__nav-item:hover:not(.logo-panel__nav-item--active) {
-  color: #1646bb
+  color: #454545
 }
 
 .logo-panel__tel {
-  color: #1646bb;
+  color: #454545;
   display: inline;
   vertical-align: middle;
   -webkit-box-align: center;
@@ -232,7 +233,7 @@ $assets-url: "../../assets";
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px dotted #1646bb;
+  border-bottom: 1px dotted #454545;
   padding-bottom: 2px;
   font-size: 18px;
   font-weight: 500;
@@ -248,7 +249,7 @@ $assets-url: "../../assets";
 .logo-panel__tel:before {
   font-family: fontello, sans-serif;
   content: '\E800';
-  color: #1646bb;
+  color: #454545;
   font-size: 22px;
   display: inline;
   vertical-align: middle;
@@ -421,21 +422,21 @@ $assets-url: "../../assets";
 
 @media only screen and (min-width:480px) {
   .logo-panel__tel {
-    background-image: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-    background-image: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: linear-gradient(to right, #1646bb 0, #32cee3 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+    background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
     -webkit-background-clip: text;
     color: transparent
   }
 
   .logo-panel__tel:before {
-    background-image: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-    background-image: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-    background-image: linear-gradient(to right, #1646bb 0, #32cee3 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+    background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+    background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
     -webkit-background-clip: text;
     color: transparent
   }

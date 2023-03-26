@@ -70,7 +70,7 @@
 }
 
 .case-card__num {
-  color: #1646bb;
+  color: #454545;
   letter-spacing: -.45px;
   font-weight: 700;
   font-size: 18px
@@ -140,12 +140,12 @@
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-  background-color: #1646bb;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-  background-image: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: linear-gradient(to right, #1646bb 0, #32cee3 100%)
+  background-color: #454545;
+  background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+  background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%)
 }
 
 .case-card__percent-wrapper,
@@ -192,7 +192,7 @@
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  background-color: #32cee3;
+  background-color: #9a9a9a;
   position: absolute;
   left: 0;
   top: 5px

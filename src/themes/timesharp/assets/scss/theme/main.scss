@@ -70,7 +70,7 @@
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -.6px;
-  color: #1646bb
+  color: #454545
 }
 
 .dev__price {
@@ -122,11 +122,11 @@
   color: #fff;
   text-decoration: none;
   margin: 0 auto;
-  background: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-  background: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-  background: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background: linear-gradient(to right, #1646bb 0, #32cee3 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+  background: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+  background: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background: linear-gradient(to right, #454545 0, #9a9a9a 100%);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px
@@ -150,11 +150,11 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#32cee3), to(#1646bb));
-  background-image: -webkit-linear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: -moz- oldlinear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: -o-linear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: linear-gradient(to right, #32cee3 0, #1646bb 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#9a9a9a), to(#454545));
+  background-image: -webkit-linear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: -moz- oldlinear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: -o-linear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: linear-gradient(to right, #9a9a9a 0, #454545 100%);
   opacity: 0
 }
 

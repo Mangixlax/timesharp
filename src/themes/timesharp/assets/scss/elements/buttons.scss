@@ -41,7 +41,7 @@ body {
   box-shadow: 1px 2px 10px rgba(0, 0, 0, .3);
   background-color: transparent;
   text-transform: uppercase;
-  border: 2px solid #1646bb;
+  border: 2px solid #454545;
   font-weight: 700;
   letter-spacing: 1.07px;
   color: #fff;
@@ -49,7 +49,7 @@ body {
 }
 
 .btn.btn--outline:hover {
-  border-color: #32cee3
+  border-color: #9a9a9a
 }
 
 .btn.btn--outline:after {
@@ -82,11 +82,11 @@ body {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-  background-image: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: linear-gradient(to right, #1646bb 0, #32cee3 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+  background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
   border: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,11 +111,11 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#32cee3), to(#1646bb));
-  background-image: -webkit-linear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: -moz- oldlinear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: -o-linear-gradient(left, #32cee3 0, #1646bb 100%);
-  background-image: linear-gradient(to right, #32cee3 0, #1646bb 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#9a9a9a), to(#454545));
+  background-image: -webkit-linear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: -moz- oldlinear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: -o-linear-gradient(left, #9a9a9a 0, #454545 100%);
+  background-image: linear-gradient(to right, #9a9a9a 0, #454545 100%);
   opacity: 0
 }
 

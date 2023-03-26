@@ -21,7 +21,7 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -.6px;
-  color: #1646bb
+  color: #454545
 }
 
 .numeric-item {
@@ -43,7 +43,7 @@
 }
 
 .numeric-item:hover .numeric-item__num {
-  color: #1646bb
+  color: #454545
 }
 
 .numeric-item:nth-child(2n) {
@@ -51,11 +51,11 @@
 }
 
 html.backgroundcliptext .numeric-item:hover .numeric-item__num {
-  background-image: -webkit-gradient(linear, left top, right top, from(#1646bb), to(#32cee3));
-  background-image: -webkit-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -moz- oldlinear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: -o-linear-gradient(left, #1646bb 0, #32cee3 100%);
-  background-image: linear-gradient(to right, #1646bb 0, #32cee3 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+  background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+  background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
   color: transparent
 }
 

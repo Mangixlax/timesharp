@@ -149,7 +149,7 @@ video {
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: -.65px;
-  color: #1646bb;
+  color: #454545;
   position: relative;
   padding-left: 38px
 }
@@ -168,15 +168,15 @@ video {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#1646bb), to(#fff));
-  background-image: -webkit-linear-gradient(right, #1646bb 0, #fff 100%);
-  background-image: -moz- oldlinear-gradient(right, #1646bb 0, #fff 100%);
-  background-image: -o-linear-gradient(right, #1646bb 0, #fff 100%);
-  background-image: linear-gradient(to left, #1646bb 0, #fff 100%)
+  background-image: -webkit-gradient(linear, right top, left top, from(#454545), to(#fff));
+  background-image: -webkit-linear-gradient(right, #454545 0, #fff 100%);
+  background-image: -moz- oldlinear-gradient(right, #454545 0, #fff 100%);
+  background-image: -o-linear-gradient(right, #454545 0, #fff 100%);
+  background-image: linear-gradient(to left, #454545 0, #fff 100%)
 }
 
 .tg a {
-  color: #1646bb;
+  color: #454545;
   text-decoration: none;
   -webkit-transition: all .2s ease 0s;
   -o-transition: all .2s ease 0s;
@@ -221,7 +221,7 @@ video {
 .tg h1 {
   font-size: 58px;
   font-weight: 500;
-  color: #1646bb;
+  color: #454545;
   line-height: 1.2em
 }
 
@@ -270,7 +270,7 @@ video {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  color: #1646bb;
+  color: #454545;
   display: inline;
   position: absolute;
   -webkit-flex-shrink: 0;
