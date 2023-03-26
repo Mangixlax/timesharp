@@ -30,8 +30,8 @@ services:
     image: certbot/certbot
     volumes:
       - ./certs:/etc/letsencrypt
-      - ./src:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html/ --email info@timesharp.ru --agree-tos --no-eff-email -d timesharp.ru
+      - ./src:/var/www/html/backend
+    command: certonly --webroot --webroot-path=/var/www/html/backend --email info@timesharp.ru --agree-tos --no-eff-email -d timesharp.ru
     depends_on:
       - nginx
   nginx:
