@@ -43,15 +43,15 @@ RUN docker-php-ext-configure gd \
 #Composer install
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN addgroup --gid "${GID}" "${USER}" \
+RUN addgroup --gid "${GID}" docker \
     && adduser \
             --disabled-password \
             --gecos "" \
             --home "$(pwd)" \
-            --ingroup "${USER}" \
+            --ingroup docker \
             --no-create-home \
             --uid "${UID}" \
-            "${USER}"
+            docker
 
 RUN mkdir -p /var/www/html/backend
 
