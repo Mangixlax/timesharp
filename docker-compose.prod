@@ -26,26 +26,17 @@ services:
       POSTGRES_DB: common
       POSTGRES_USER: pguser
       POSTGRES_PASSWORD: pgpass
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./certs:/etc/letsencrypt
-      - ./src:/var/www/html/backend
-    command: certonly --webroot --webroot-path=/var/www/html/backend --email info@timesharp.ru --agree-tos --no-eff-email -d timesharp.ru
-    depends_on:
-      - nginx
   nginx:
     image: nginx:1.19.10-alpine
     restart: on-failure:10
     ports:
       - '80:80'
       - '443:443'
-    entrypoint: /docker-entrypoint.sh
+    entrypoint: /entrypoint.sh
     volumes:
       - ./src:/var/www/html/backend
       - ./docker/prod/nginx/site.conf:/etc/nginx/conf.d/site.conf
-      - ./certs:/etc/letsencrypt/live
-      - ./docker/prod/nginx/wait-for-certs.sh:/wait-for-certs.sh
+      - ./letsencrypt:/etc/letsencrypt
     env_file: ./docker/.env
     expose:
       - 80
