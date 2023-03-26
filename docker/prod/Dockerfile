@@ -26,13 +26,6 @@ RUN apk add --update curl $PHPIZE_DEPS \
 
 RUN npm install --global yarn
 
-# Copy the entrypoint script and make it executable
-COPY ./entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-
-RUN apk add --update certbot certbot-nginx
-
 #Common php extension
 RUN docker-php-ext-install pdo pdo_pgsql exif \
     && docker-php-ext-enable pdo \
