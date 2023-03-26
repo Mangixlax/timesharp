@@ -1,0 +1,65 @@
+url = "/novosti/:slug"
+layout = "default"
+title = "Детальная страница новости"
+meta_title = "{{ newsPost.title }} - Новости"
+
+[section newsPost]
+handle = "News\Post"
+entrySlug = "{{ :slug }}"
+
+[collection news]
+handle = "News\Post"
+==
+{% if newsPost is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set morePosts = news.whereNot('id', newsPost.id).paginate(3) %}
+
+<main class="page-main page-seo">
+    <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'novosti/index' | page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Новости</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">{{ newsPost.title }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron case__news">
+        <div class="jumbotron__inner">
+            <h1 class="jumbotron__title">
+                 {{ newsPost.title }}
+            </h1>
+        </div>
+    </div>
+    <div class="detail__wrapper">
+        {% set publishedDate = newsPost.published_at is not empty ? newsPost.published_at : newsPost.created_at %}
+        <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div>
+        {{ newsPost.content | raw }}
+    </div>
+    {% if morePosts is not empty %}
+    <div class="clients__wrapper--gray">
+        <div class="clients__wrapper">
+            <div class="case__similar">Еще новости</div>
+            {% for post in morePosts %}
+                {% partial 'news/post-card' post=post %}
+            {% endfor %}
+        </div>
+        <a href="{{ 'novosti/index' | page }}" class="btn btn--outline btn--medium about__detailed-btn">ВСЕ НОВОСТИ</a>
+    </div>
+    {% endif %}
+    {% partial 'forms/callback' %}
+</main>

@@ -1,0 +1,239 @@
+url = "/portfolio/:slug"
+layout = "default"
+title = "Детальная страница портфолио"
+meta_title = "{{ portfolioWork.title }}"
+
+[section portfolioWork]
+handle = "Portfolio\Work"
+entrySlug = "{{ :slug }}"
+
+[collection portfolioWorks]
+handle = "Portfolio\Work"
+==
+function onStart() {
+    $this['formHelper'] = new \Sabr\Toolbox\Helpers\FormHelper;
+}
+==
+{% if portfolioWork is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set firstServiceInWork = null %}
+
+{% if portfolioWork.services is not empty %}
+    {% set firstServiceInWork = formHelper.getServicePage(portfolioWork.services[0].page) %}
+{% endif %}
+
+<main class="page-main page-seo">
+    <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'index' | page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'portfolio/index' | page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Портфолио</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">{{ portfolioWork.title }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron"{{ portfolioWork.background ? ("style='background-image: url(" ~ portfolioWork.background.path ~ ")'") | raw : '' }}>
+        <div class="jumbotron__inner">
+            <h1 class="jumbotron__title">
+                {{ portfolioWork.title }}
+            </h1>
+            <p class="jumbotron__subtitle">
+                Клиент: {{ portfolioWork.client }}
+                <br />
+                Сайт:
+                <a
+                   class="case__link case__link--under"
+                   href="{{ portfolioWork.site }}"
+                   rel="nofollow"
+                   target="_blank">{{ portfolioWork.site | replace({ 'https://': '', 'http://': '' }) }}</a>
+                <br />
+                Услуга:
+                {% for service in portfolioWork.services %}
+                {% set servicePage = formHelper.getServicePage(service.page) %}
+                <a
+                    class="case__link case__link--under"
+                    href="{{ service.page | page }}"
+                    rel="nofollow"
+                    target="_blank"
+                >{{ servicePage.title }}{% if not loop.last %}, {% endif %}</a>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+
+    {% if portfolioWork.tasks is not empty %}
+    <div class="seo-advancement">
+        <div class="seo-advancement__inner">
+            <h2 class="seo-advancement__title section-title">Задача</h2>
+            <div class="seo-advancement__contain section-contain">
+                <div class="seo-advancement__list">
+                    {% for task in portfolioWork.tasks %}
+                    <div class="seo-advancement__col">
+                        <div class="empty-card seo-advancement__empty-card empty-card--center">
+                            <div class="empty-card__icon-wrapper">
+                                <svg class="empty-card__icon">
+                                    <use xlink:href="{{ 'assets/images/svg-icons.svg' | theme }}#{{ task.icon }}"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-card__txt">{{ task.title | raw }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if portfolioWork.solutions is not empty %}
+    <div class="seo-steps">
+        <div class="seo-steps__inner">
+            <h2 class="seo-steps__title section-title">Решение</h2>
+            <div class="seo-steps__contain section-contain">
+                <div class="numeric-list seo-steps__numeric-list">
+                    {% for solution in portfolioWork.solutions %}
+                    <div class="numeric-item">
+                        <span class="numeric-item__num">{{ loop.index }}</span>
+                        <div class="numeric-item__txt-wrapper">
+                            <p class="numeric-item__title">{{ solution.title | raw }}</p>
+                            <p class="numeric-item_txt">{{ solution.content | raw }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if portfolioWork.results is not empty %}
+    <div class="seo-advancement">
+        <div class="seo-advancement__inner">
+            <h2 class="seo-advancement__title section-title">Результаты</h2>
+            <div class="seo-advancement__contain section-contain">
+                <div class="seo-advancement__list">
+                    {% for resultItem in portfolioWork.results %}
+                    <div class="seo-advancement__col">
+                        <div class="empty-card seo-advancement__empty-card empty-card--center">
+                            <div class="empty-card__icon-wrapper">
+                                <svg class="empty-card__icon">
+                                    <use xlink:href="{{ 'assets/images/svg-icons.svg' | theme }}#{{ resultItem.icon }}"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-card__txt">{{ resultItem.content | raw }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% if firstServiceInWork %}
+                <a
+                    href="{{ firstServiceInWork.baseFileName | page }}"
+                    class="btn btn--outline btn--medium about__detailed-btn btn--seo2"
+                    title="Услуга - {{ firstServiceInWork.meta_title }}"
+                >Подробнее об услуге</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# @TODO Добавить похожие проекты #}
+    {# <div class="clients__wrapper--gray">
+        <div class="clients__wrapper">
+            <div class="case__similar">Похожие проекты</div>
+            <a
+                class="clients__item"
+                href="../keys-po-reklame-mikrokreditovanie/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it14.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 34 заявок</span>
+                        <span class="clients__pic-txt--small">в неделю</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Контекстная и таргетированная реклама для
+                    микрокредитования</span
+                >
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-reklame-gdeetotdom/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it6.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">350%</span>
+                        <span class="clients__pic-txt--small">ROMI</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Контекстная и таргетированная реклама для портала
+                    gdeetotdom.ru</span
+                >
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-zvonkam-zastroishiki-moskva/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it8.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 200 звонков</span>
+                        <span class="clients__pic-txt--small"
+                            >в месяц на объект</span
+                        >
+                    </span>
+                </span>
+                <span class="clients__txt">Генерация звонков из SMM для застройщиков Москвы иобласти</span>
+            </a>
+            <a
+                class="clients__item"
+                href="../keys-po-zvonkam-zastroishiki-ispanii/index.html"
+            >
+                <span class="clients__pic-wrap">
+                    <span
+                        class="clients__pic"
+                        style="background-image: url(../../images/it12.jpg)"
+                    ></span>
+                    <span class="clients__txt-wrap">
+                        <span class="clients__pic-txt">До 150 звонков</span>
+                        <span class="clients__pic-txt--small">в месяц</span>
+                    </span>
+                </span>
+                <span class="clients__txt"
+                    >Генерация звонков для застройщиков Испании</span
+                >
+            </a>
+        </div>
+        <a
+            href="{{ 'index' | page }}"
+            class="btn btn--outline btn--medium about__detailed-btn"
+            >ВСЕ КЕЙСЫ</a
+        >
+    </div>#}
+</main>

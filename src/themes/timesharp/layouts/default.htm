@@ -1,0 +1,47 @@
+##
+description = "Default layout"
+==
+function onSendCallbackForm()
+{
+    $inputs = \Request::only(['form_desc', 'name', 'phone', 'message']);
+    \Sabr\Toolbox\Classes\TelegramSender::sendMessage($inputs);
+}
+==
+{% apply spaceless %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+    <body class="{{ 'page-' ~ this.page.id }}">
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        {% partial 'modals/callback' %}
+
+        {% framework extras %}
+        {% scripts %}
+
+        <script src="{{ [
+            'assets/js/vendor.js',
+            'assets/js/common.js',
+            'assets/js/yamap.js',
+        ]|theme }}"></script>
+
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    </body>
+</html>
+{% endapply %}

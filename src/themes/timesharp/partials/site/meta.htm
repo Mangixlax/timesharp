@@ -1,0 +1,31 @@
+<meta charset="utf-8" />
+
+<title>{{ this.page.meta_title ?: placeholder('pageTitle') }} - timesharp</title>
+
+<meta name="title" content="{{ page.meta_title }}" />
+<meta name="description" content="{{ page.meta_description }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{%- set icons = [
+    { href: 'assets/images/favicon/fav128x128.png', sizes: '128x128' },
+    { href: 'assets/images/favicon/fav64x64.png', sizes: '64x64' },
+    { href: 'assets/images/favicon/fav48x48.png', sizes: '48x48' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+    { href: 'assets/images/favicon/fav32x32.png', sizes: '32x32' },
+] -%}
+{%- for icon in icons -%}
+    <link rel="apple-touch-icon" href="{{ icon.href | theme }}" sizes="{{ icon.sizes }}">
+{%- endfor -%}
+{%- for icon in icons -%}
+    <link rel="icon" type="image/png" href="{{ icon.href | theme }}" sizes="{{ icon.sizes }}">
+{%- endfor -%}
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet" />
+
+{% styles %}
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&amp;subset=cyrillic" rel="stylesheet"/>

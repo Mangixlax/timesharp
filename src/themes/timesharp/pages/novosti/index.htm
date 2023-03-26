@@ -1,0 +1,41 @@
+url = "/novosti"
+layout = "default"
+title = "Новости"
+meta_title = "Новости"
+
+[collection news]
+handle = "News\Post"
+==
+{% set posts = news.get() %}
+
+<main class="page-main page-clients">
+    <div class="breadcrumbs page-contacts__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">Новости</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-contacts__hat">
+        <div class="page-contacts__hat-inner">
+            <h1 class="page-contacts__title">Новости</h1>
+            <div class="clients__info">
+                Только самые свежие и интересные новости
+            </div>
+        </div>
+    </div>
+    <div class="clients__wrapper">
+        {% for post in posts %}
+            {% partial 'news/post-card' post=post %}
+        {% endfor %}
+    </div>
+    {% partial 'site/numbers' %}
+</main>

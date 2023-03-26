@@ -1,0 +1,81 @@
+url = "/contacts"
+layout = "default"
+title = "Контакты"
+meta_title = "Контакты"
+==
+<main class="page-main page-contacts">
+    <div class="breadcrumbs page-contacts__breadcrumb">
+        <div class="breadcrumbs__inner">
+            <div class="breadcrumbs__contain">
+                <div class="breadcrumbs__item">
+                    <a href="{{ 'index'|page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Главная</span>
+                    </a>
+                </div>
+
+                <div class="breadcrumbs__item">
+                    <span class="breadcrumbs__text">Контакты</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-contacts__hat">
+        <div class="page-contacts__hat-inner">
+            <h1 class="page-contacts__title">Контакты</h1>
+        </div>
+    </div>
+    <div class="page-contacts__map-wrapper">
+        <div class="page-contacts__map-popup-wrapper">
+            <div class="page-contacts__map-popup">
+                <div class="page-contacts__map-popup-hat">
+                    <p>Москва</p>
+                </div>
+                <div class="page-contacts__map-popup-contain">
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">Адрес</p>
+                        <p class="page-contacts__map-popup-txt">
+                            123001, г. Москва, ул. Садовая Б., д. 3, строение 7,
+                            помещение I, комната 13, оф. А7Ф
+                        </p>
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">Телефон</p>
+                        <a
+                            href="tel:+79819998954"
+                            class="page-contacts__map-phone js-dct-phone"
+                            >+7 (981) 999-89-54</a
+                        >
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">
+                            Электронная почта
+                        </p>
+                        <a
+                            href="mailto:max@timesharp.ru"
+                            class="page-contacts__map-mail"
+                            ><span
+                                class="__cf_email__"
+                                >max@timesharp.ru</span
+                            ></a
+                        >
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">ИНН</p>
+                        <p class="page-contacts__map-popup-txt">​7723485783</p>
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">ОГРН</p>
+                        <p class="page-contacts__map-popup-txt">
+                            ​5167746304567
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+            type="text/javascript"
+        ></script>
+        <div class="page-contacts__map" id="contacts-map"></div>
+    </div>
+</main>

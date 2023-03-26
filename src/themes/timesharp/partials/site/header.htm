@@ -1,0 +1,158 @@
+<!-- header -->
+{% placeholder headerBefore %}
+<header class="page-header" id="page-header">
+    <div class="logo-panel" id="logo-panel">
+        <div class="logo-panel__inner">
+            <a
+                href="{{ 'index'|page }}"
+                class="logo logo-panel__logo"
+                role="img"
+                title="logoHeader"
+            ></a>
+            <div class="logo-panel__nav">
+                <a
+                    href="{{ 'about'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
+                >
+                    о компании
+                </a>
+                <a
+                    href="{{ 'novosti/index'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
+                >
+                    Новости
+                </a>
+                <a
+                    href="{{ 'portfolio/index'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen nav-link"
+                >
+                    Портфолио
+                </a>
+                <a
+                    href="{{ 'contacts'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen"
+                >
+                    контакты
+                </a>
+            </div>
+            <a href="tel:+79819998954" class="logo-panel__tel js-dct-phone">
+                +7 (981) 999-89-54
+            </a>
+            <div class="logo-panel__btn-wrapper">
+                <a
+                    href="javascript:void(0)"
+                    class="btn btn--medium btn--primary logo-panel__btn"
+                    data-modal-form-desc="Форма в шапке"
+                    data-uk-modal="{target:'#modal-callback', center:true}"
+                >
+                    Заказать звонок
+                </a>
+            </div>
+            <button
+                class="logo-panel__burger hamburger hamburger--spin"
+                id="hamburger"
+                type="button"
+            >
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    {# <div class="header-navbar" id="header-navbar">
+        <div class="header-navbar__inner">
+            <div class="header-navbar__nav">
+                <ul class="header-navbar__nav-list">
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'seo'|page }}"
+                            class="header-navbar__nav-link"
+                        >SEO</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a href="{{ 'smm'|page }}" class="header-navbar__nav-link"
+                        >SMM</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'serm'|page }}"
+                            class="header-navbar__nav-link"
+                        >Управление репутацией</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'context'|page }}"
+                            class="header-navbar__nav-link"
+                        >Контекстная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'target'|page }}"
+                            class="header-navbar__nav-link"
+                        >Таргетированная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'media'|page }}"
+                            class="header-navbar__nav-link"
+                        >Медийная реклама</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'leads'|page }}"
+                            class="header-navbar__nav-link"
+                        >Лидогенерация</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'web-development'|page }}"
+                            class="header-navbar__nav-link"
+                        >Веб-разработка</a
+                        >
+                    </li>
+                </ul>
+            </div> #}
+            <div class="header-navbar__mobile-nav">
+                <ul class="header-navbar__nav-list">
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'about'|page }}"
+                            class="header-navbar__nav-link js-scrollScreen"
+                        >О компании</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'novosti'|page }}"
+                            class="header-navbar__nav-link js-scrollScreen"
+                        >Новости</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'portfolio'|page }}"
+                            class="header-navbar__nav-link js-scrollScreen"
+                        >Портфолио</a
+                        >
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'contacts'|page }}"
+                            class="header-navbar__nav-link js-scrollScreen"
+                        >Контакты</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+{% placeholder headerAfter %}
