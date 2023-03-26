@@ -29,7 +29,7 @@ RUN npm install --global yarn
 RUN apk add --update certbot certbot-nginx
 
 # Copy the entrypoint script and make it executable
-COPY ./docker/prod/entrypoint.sh /entrypoint.sh
+COPY ../docker/prod/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 #Common php extension
