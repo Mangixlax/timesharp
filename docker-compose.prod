@@ -31,7 +31,6 @@ services:
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
       - ./certbot/conf/:/etc/letsencrypt/:rw
-    command: certonly --webroot --webroot-path /var/www/certbot/ -d timesharp.ru
     depends_on:
       - nginx
   nginx:
@@ -40,7 +39,6 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    entrypoint: /docker-entrypoint.sh
     volumes:
       - ./src:/var/www/html/backend
       - ./docker/prod/nginx/site.conf:/etc/nginx/conf.d/site.conf
