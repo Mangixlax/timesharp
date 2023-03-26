@@ -26,22 +26,6 @@ services:
       POSTGRES_DB: common
       POSTGRES_USER: pguser
       POSTGRES_PASSWORD: pgpass
-  nginx:
-    image: nginx:1.19.10-alpine
-    restart: on-failure:10
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./src:/var/www/html/backend
-      - ./docker/prod/nginx/site.conf:/etc/nginx/conf.d/site.conf
-      - ./certs:/etc/letsencrypt/live
-    env_file: ./docker/.env
-    expose:
-      - 80
-    command: ["nginx", "-g", "daemon off;"]
-    depends_on:
-      - backend
   certbot:
     image: certbot/certbot
     volumes:
@@ -49,8 +33,24 @@ services:
     command: certonly --webroot --webroot-path=/var/www/html/ --email info@timesharp.ru --agree-tos --no-eff-email -d timesharp.ru
     depends_on:
       - nginx
-    networks:
-      - mynetwork
+  nginx:
+    image: nginx:1.19.10-alpine
+    restart: on-failure:10
+    ports:
+      - '80:80'
+      - '443:443'
+    entrypoint: /docker-entrypoint.sh
+    volumes:
+      - ./src:/var/www/html/backend
+      - ./docker/prod/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./certs:/etc/letsencrypt/live
+      - ./docker/prod/nginx/wait-for-certs.sh:/wait-for-certs.sh
+    env_file: ./docker/.env
+    expose:
+      - 80
+    command: [ "/wait-for-certs.sh", "nginx", "-g", "daemon off;" ]
+    depends_on:
+      - backend
 
 volumes:
   timesharp_db:
