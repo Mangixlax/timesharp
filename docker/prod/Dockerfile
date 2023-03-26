@@ -27,7 +27,7 @@ RUN apk add --update curl $PHPIZE_DEPS \
 RUN npm install --global yarn
 
 # Copy the entrypoint script and make it executable
-COPY ./docker/prod/entrypoint.sh /entrypoint.sh
+COPY /home/timesharp/docker/prod/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 
