@@ -16,7 +16,16 @@
 }
 
 .section-contain {
-  margin-top: 60px
+  margin-top: 60px;
+
+  >h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #263238;
+    margin-bottom: 24px;
+    text-align: center;
+  }
 }
 
 .dev__wrapper {
@@ -25,15 +34,13 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
+  grid-gap: 24px;
 }
 
 .dev__wrapper--margin {
@@ -55,27 +62,79 @@
   transition: all .2s ease;
   overflow: hidden;
   margin-bottom: 50px;
-  padding-top: 60px;
-  padding-bottom: 110px;
-  padding-left: 20px;
-  padding-right: 20px
+  padding: 60px;
+  padding-bottom: 32px;
+  width: 100%;
+
+  >table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 1px;
+
+    th {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #454545;
+      text-align: start;
+      padding: 8px;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    th+th {
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    td+td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    tr {
+
+      &:hover {
+        outline: 1px solid rgba(#454545, 0.5);
+      }
+    }
+  }
 }
 
 .dev__title {
   display: block;
-  text-align: center;
   position: relative;
   z-index: 2;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 28px;
   letter-spacing: -.6px;
-  color: #454545
+  color: #454545;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.dev__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #454545;
+  margin: 16px 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+
+  >span {
+    white-space: nowrap;
+  }
 }
 
 .dev__price {
   display: block;
-  text-align: center;
   position: relative;
   z-index: 2;
   margin-top: 40px;
@@ -90,8 +149,49 @@
   font-weight: 700
 }
 
-.dev__btn {
+.dev__content {
+  display: block;
+  color: #263238;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+
+.dev__line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-bottom: 1px solid #d2dbe0;
+  padding-top: 16px
+}
+
+.dev__content--disabled {
+  color: #999
+}
+
+.dev__content--disabled span {
+  position: relative
+}
+
+.dev__content--disabled span:after {
   position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: #999;
+  z-index: 2
+}
+
+.dev__btn {
   bottom: 60px;
   left: 0;
   right: 0;
@@ -110,7 +210,6 @@
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 175px;
   height: 50px;
   text-align: center;
   z-index: 2;
@@ -129,7 +228,11 @@
   background: linear-gradient(to right, #454545 0, #9a9a9a 100%);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px
+  border-radius: 4px;
+  margin-top: 24px;
+  padding: 0 30px;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 .dev__btn:before {
@@ -183,57 +286,22 @@
   display: block
 }
 
-.dev__content {
-  display: block;
-  text-align: center;
-  color: #263238;
-  margin-top: 16px
-}
-
-.dev__line {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  border-bottom: 1px solid #d2dbe0;
-  padding-top: 16px
-}
-
-.dev__content--disabled {
-  color: #999
-}
-
-.dev__content--disabled span {
-  position: relative
-}
-
-.dev__content--disabled span:after {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
-  height: 1px;
-  background: #999;
-  z-index: 2
-}
-
 @media (max-width:1023px) {
   .dev__item {
     padding-top: 30px;
-    padding-bottom: 80px;
-    padding-left: 10px;
-    padding-right: 10px
+    padding-bottom: 24px;
+    padding-left: 4px;
+    padding-right: 4px
   }
 
   .dev__title {
     font-size: 18px;
     line-height: 24px
+  }
+
+  .dev__subtitle {
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .dev__price {

@@ -57,21 +57,21 @@
                       items: 1,
                       dots: !1,
                       nav: !1,
-                      autoplay: !1,
+                      autoplay: !0,
                       autoWidth: !1,
                       mouseDrag: !1,
                       touchDrag: !0,
                       loop: !0,
-                      margin: 5,
+                      margin: 0,
                   })
                 : e.owlCarousel({
                       items: 1,
                       dots: !1,
                       nav: !1,
-                      autoplay: !1,
+                      autoplay: !0,
                       autoWidth: !1,
                       loop: !0,
-                      margin: 5,
+                      margin: 0,
                   });
     }
     function s() {
