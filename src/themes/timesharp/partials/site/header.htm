@@ -17,10 +17,10 @@
                     о компании
                 </a>
                 <a
-                    href="{{ 'novosti/index'|page }}"
+                    href="{{ 'journal/index'|page }}"
                     class="logo-panel__nav-item js-scrollScreen nav-link"
                 >
-                    Новости
+                    Журнал
                 </a>
                 <a
                     href="{{ 'portfolio/index'|page }}"
@@ -34,9 +34,15 @@
                 >
                     контакты
                 </a>
+                <a
+                    href="{{ 'dilivery'|page }}"
+                    class="logo-panel__nav-item js-scrollScreen"
+                >
+                    Доставка
+                </a>
             </div>
-            <a href="tel:+79819998954" class="logo-panel__tel js-dct-phone">
-                +7 (981) 999-89-54
+            <a href="tel:+74957892513" class="logo-panel__tel js-dct-phone">
+                +7 (495) 789-25-13
             </a>
             <div class="logo-panel__btn-wrapper">
                 <a
@@ -45,7 +51,7 @@
                     data-modal-form-desc="Форма в шапке"
                     data-uk-modal="{target:'#modal-callback', center:true}"
                 >
-                    Заказать звонок
+                    Заказать заточку
                 </a>
             </div>
             <button
@@ -59,8 +65,7 @@
             </button>
         </div>
     </div>
-
-    {# <div class="header-navbar" id="header-navbar">
+    <div class="header-navbar" id="header-navbar">
         <div class="header-navbar__inner">
             <div class="header-navbar__nav">
                 <ul class="header-navbar__nav-list">
@@ -119,7 +124,7 @@
                         >
                     </li>
                 </ul>
-            </div> #}
+            </div>
             <div class="header-navbar__mobile-nav">
                 <ul class="header-navbar__nav-list">
                     <li class="header-navbar__nav-item">
@@ -131,9 +136,9 @@
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
-                            href="{{ 'novosti'|page }}"
+                            href="{{ 'journal'|page }}"
                             class="header-navbar__nav-link js-scrollScreen"
-                        >Новости</a
+                        >Журнал</a
                         >
                     </li>
                     <li class="header-navbar__nav-item">

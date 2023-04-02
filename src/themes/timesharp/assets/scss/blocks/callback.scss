@@ -118,11 +118,18 @@
 }
 
 .callback-form__txt {
+  height: 50px;
+  background-color: #fff;
   font-size: 18px;
-  color: #fff;
-  font-weight: 400;
+  color: #263238;
+  font-weight: 500;
   line-height: 28px;
-  letter-spacing: -.45px
+  letter-spacing: -.45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
 }
 
 .callback-form__description-txt {
@@ -279,7 +286,6 @@ h2.callback-form__title {
 
 .callback-form__form-inner {
   margin-left: -20px;
-  margin-top: 23px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

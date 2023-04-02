@@ -185,7 +185,7 @@ $assets-url: "../../assets";
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 40px;
+  margin-left: 25px;
   height: 35px;
   -webkit-transition: all .2s ease 0s;
   -o-transition: all .2s ease 0s;
@@ -217,7 +217,7 @@ $assets-url: "../../assets";
 }
 
 .logo-panel__nav-item:not(:last-child) {
-  margin-right: 40px
+  margin-right: 25px
 }
 
 .logo-panel__nav-item:hover:not(.logo-panel__nav-item--active) {
@@ -243,7 +243,7 @@ $assets-url: "../../assets";
 }
 
 .logo-panel__tel+.logo-panel__btn-wrapper {
-  margin-left: 70px
+  margin-left: 35px
 }
 
 .logo-panel__tel:before {

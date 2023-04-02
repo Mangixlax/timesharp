@@ -1,7 +1,7 @@
-url = "/novosti/:slug"
+url = "/journal/:slug"
 layout = "default"
-title = "Детальная страница новости"
-meta_title = "{{ newsPost.title }} - Новости"
+title = "Детальная страница Журнала"
+meta_title = "{{ newsPost.title }} - Журнал"
 
 [section newsPost]
 handle = "News\Post"
@@ -27,8 +27,8 @@ handle = "News\Post"
                 </div>
 
                 <div class="breadcrumbs__item">
-                    <a href="{{ 'novosti/index' | page }}" class="breadcrumbs__link">
-                        <span class="breadcrumbs__text">Новости</span>
+                    <a href="{{ 'journal/index' | page }}" class="breadcrumbs__link">
+                        <span class="breadcrumbs__text">Журнал</span>
                     </a>
                 </div>
 
@@ -53,12 +53,12 @@ handle = "News\Post"
     {% if morePosts is not empty %}
     <div class="clients__wrapper--gray">
         <div class="clients__wrapper">
-            <div class="case__similar">Еще новости</div>
+            <div class="case__similar">Еще записи</div>
             {% for post in morePosts %}
                 {% partial 'news/post-card' post=post %}
             {% endfor %}
         </div>
-        <a href="{{ 'novosti/index' | page }}" class="btn btn--outline btn--medium about__detailed-btn">ВСЕ НОВОСТИ</a>
+        <a href="{{ 'journal/index' | page }}" class="btn btn--outline btn--medium about__detailed-btn">ВСЕ ЗАПИСИ</a>
     </div>
     {% endif %}
     {% partial 'forms/callback' %}
