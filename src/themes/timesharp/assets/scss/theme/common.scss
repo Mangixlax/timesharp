@@ -36,12 +36,18 @@ ul {
 .seo-advancement__inner,
 .seo-brif__inner,
 .seo-steps__inner,
+.seo-content__inner,
 .why__inner {
   max-width: 1205px;
   width: auto;
   margin-left: auto;
   margin-right: auto;
   padding: 0 25px
+}
+
+.seo-content {
+  width: 100%;
+  padding: 80px 0;
 }
 
 a,
@@ -144,6 +150,7 @@ video {
 }
 
 .tg h3,
+h2,
 .tg>ol>li {
   font-size: 26px;
   font-weight: 500;
@@ -172,20 +179,40 @@ video {
   background-image: -webkit-linear-gradient(right, #454545 0, #fff 100%);
   background-image: -moz- oldlinear-gradient(right, #454545 0, #fff 100%);
   background-image: -o-linear-gradient(right, #454545 0, #fff 100%);
-  background-image: linear-gradient(to left, #454545 0, #fff 100%)
+  background-image: linear-gradient(to left, #454545 0, #fff 100%);
+}
+
+.tg {
+  >h2 {
+    &::after {
+      content: '';
+      width: 28px;
+      height: 4px;
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      top: .5em;
+      left: 0;
+      margin-right: 10px;
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      border-radius: 1px;
+      background-image: -webkit-gradient(linear, right top, left top, from(#454545), to(#fff));
+      background-image: -webkit-linear-gradient(right, #454545 0, #fff 100%);
+      background-image: -moz- oldlinear-gradient(right, #454545 0, #fff 100%);
+      background-image: -o-linear-gradient(right, #454545 0, #fff 100%);
+      background-image: linear-gradient(to left, #454545 0, #fff 100%);
+    }
+  }
 }
 
 .tg a {
-  color: #454545;
+  color: #f05321;
   text-decoration: none;
   -webkit-transition: all .2s ease 0s;
   -o-transition: all .2s ease 0s;
   -moz-transition: all .2s ease 0s;
   transition: all .2s ease 0s
-}
-
-.tg a:visited {
-  color: #551a8b
 }
 
 .tg a:hover {
@@ -245,12 +272,26 @@ video {
   margin-top: 42px
 }
 
+.tg p+h2 {
+  margin-top: 80px
+}
+
+.tg h2+p {
+  margin-top: 35px
+}
+
+.tg h2+ol {
+  margin-top: 42px
+}
+
+
 .tg li+li {
   margin-top: 35px
 }
 
 .tg ul {
-  list-style: none
+  list-style: none;
+  padding: 24px 0;
 }
 
 .tg ul li+li {
@@ -259,7 +300,7 @@ video {
 
 .tg ul li {
   position: relative;
-  padding-left: 40px
+  padding-left: 24px
 }
 
 .tg ul li:before {
@@ -336,6 +377,7 @@ video {
 }
 
 @media only screen and (max-width:767px) {
+
   .about-numbers__inner,
   .audit-kinds__inner,
   .audit-research__inner,
@@ -354,7 +396,7 @@ video {
   .section-inner,
   .seo-advancement__inner,
   .seo-brif__inner,
-  .seo-steps__inner,
+  .seo-steps__inner .seo-content__inner,
   .why__inner {
     padding-left: 20px;
     padding-right: 20px

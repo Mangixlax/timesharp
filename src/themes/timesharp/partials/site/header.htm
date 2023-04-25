@@ -9,37 +9,84 @@
                 role="img"
                 title="logoHeader"
             ></a>
-            <div class="logo-panel__nav">
-                <a
-                    href="{{ 'about'|page }}"
-                    class="logo-panel__nav-item js-scrollScreen nav-link"
-                >
-                    о компании
-                </a>
-                <a
-                    href="{{ 'journal/index'|page }}"
-                    class="logo-panel__nav-item js-scrollScreen nav-link"
-                >
-                    Журнал
-                </a>
-                <a
-                    href="{{ 'portfolio/index'|page }}"
-                    class="logo-panel__nav-item js-scrollScreen nav-link"
-                >
-                    Портфолио
-                </a>
-                <a
-                    href="{{ 'contacts'|page }}"
-                    class="logo-panel__nav-item js-scrollScreen"
-                >
-                    контакты
-                </a>
-                <a
-                    href="{{ 'dilivery'|page }}"
-                    class="logo-panel__nav-item js-scrollScreen"
-                >
-                    Доставка
-                </a>
+            <div>
+                <ul class="logo-panel__nav">
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'about'|page }}"
+                            class="logo-panel__nav-item nav-link"
+                        >
+                            о компании
+                        </a>
+                        <ul class="logo-panel__dropdown">
+                            {# <img src="{{ media('assets/images/svg/.svg') }}" alt="Your SVG File"> #}
+                            <li>
+                                <a
+                                    href="{{ 'journal'|page }}"
+                                    class="logo-panel__nav-item nav-link"
+                                >
+                                    Журнал
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="{{ 'portfolio'|page }}"
+                                    class="logo-panel__nav-item nav-link"
+                                >
+                                    Портфолио
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="{{ 'garantii'|page }}"
+                                    class="logo-panel__nav-item nav-link"
+                                >
+                                    Гарантии
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="{{ 'vacancii'|page }}"
+                                    class="logo-panel__nav-item nav-link"
+                                >
+                                    Вакансии
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'journal/index'|page }}"
+                            class="logo-panel__nav-item js-scrollScreen nav-link"
+                        >
+                            Журнал
+                        </a>
+                    </li>
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'portfolio/index'|page }}"
+                            class="logo-panel__nav-item js-scrollScreen nav-link"
+                        >
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'contacts'|page }}"
+                            class="logo-panel__nav-item js-scrollScreen"
+                        >
+                            контакты
+                        </a>
+                    </li>
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'dilivery'|page }}"
+                            class="logo-panel__nav-item js-scrollScreen"
+                        >
+                            Доставка
+                        </a>
+                    </li>
+                </ul>
             </div>
             <a href="tel:+74957892513" class="logo-panel__tel js-dct-phone">
                 +7 (495) 789-25-13
@@ -71,19 +118,10 @@
                 <ul class="header-navbar__nav-list">
                     <li class="header-navbar__nav-item">
                         <a
-                            href="{{ 'kitchen-knives'|page }}"
+                            href="{{ 'nozhi'|page }}"
                             class="header-navbar__nav-link"
                         >
-                            Кухонные ножи
-                        </a>
-                    </li>
-
-                    <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'kruglye-nozhi'|page }}"
-                            class="header-navbar__nav-link"
-                        >
-                            Круглые ножи
+                            Ножи
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
@@ -94,36 +132,27 @@
                             Ножницы
                         </a>
                     </li>
-                    <span class="header-navbar__nav-label">
-                        Инструмент:
-                    </span>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
                             class="header-navbar__nav-link"
-                        >Парикмахерский / Грумерский</a>
+                            >Парикмахерский / Грумерский инструмент</a
+                        >
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
                             class="header-navbar__nav-link"
                         >
-                            Маникюрный
+                            Маникюрный инструмент
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
-                            href="{{ 'zatochka-stolyarnogo-instrumenta'|page }}"
+                            href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
                             class="header-navbar__nav-link"
+                            >Различный инструмент</a
                         >
-                            Столярный
-                        </a>
-                    </li>
-                    <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'zatochka-bytovogo-instrumenta'|page }}"
-                            class="header-navbar__nav-link"
-                        >Бытовой</a>
                     </li>
                 </ul>
             </div>
