@@ -18,8 +18,17 @@
                         >
                             о компании
                         </a>
+                        <svg>
+                            <use
+                                xlink:href="{{ 'assets/images/svg-icons.svg#dropdown-menu'|theme }}"
+                            ></use>
+                        </svg>
                         <ul class="logo-panel__dropdown">
-                            {# <img src="{{ media('assets/images/svg/.svg') }}" alt="Your SVG File"> #}
+                            <svg>
+                                <use
+                                    xlink:href="{{ 'assets/images/svg-icons.svg#up'|theme }}"
+                                ></use>
+                            </svg>
                             <li>
                                 <a
                                     href="{{ 'journal'|page }}"
@@ -56,26 +65,18 @@
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
-                            href="{{ 'journal/index'|page }}"
+                            href="{{ 'akcii'|page }}"
                             class="logo-panel__nav-item js-scrollScreen nav-link"
                         >
-                            Журнал
+                            Акции
                         </a>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
-                            href="{{ 'portfolio/index'|page }}"
+                            href="{{ 'oplata'|page }}"
                             class="logo-panel__nav-item js-scrollScreen nav-link"
                         >
-                            Портфолио
-                        </a>
-                    </li>
-                    <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'contacts'|page }}"
-                            class="logo-panel__nav-item js-scrollScreen"
-                        >
-                            контакты
+                            Оплата
                         </a>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
@@ -84,6 +85,14 @@
                             class="logo-panel__nav-item js-scrollScreen"
                         >
                             Доставка
+                        </a>
+                    </li>
+                    <li class="logo-panel__nav-item js-scrollScreen">
+                        <a
+                            href="{{ 'contacts'|page }}"
+                            class="logo-panel__nav-item js-scrollScreen"
+                        >
+                            Контакты
                         </a>
                     </li>
                 </ul>

@@ -189,6 +189,10 @@ $assets-url: "../../assets";
   -ms-flex-align: end;
   align-items: center;
   padding-top: 4px;
+
+  > li:not(:last-child) {
+    margin-right: 25px;
+  }
 }
 
 .logo-panel__nav-item {
@@ -203,20 +207,42 @@ $assets-url: "../../assets";
   text-decoration: none;
   color: #263238;
   position: relative;
+  padding: 6px 0;
+
+  &:hover {
+    color: #f05321;
+
+    & .logo-panel__dropdown {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    > svg {
+      transform: rotate(180deg);
+    }
+  }
+  
+  > svg {
+    height: 12px;
+    width: 12px;
+    transition: transform 0.3s ease;
+  }
 }
 
 .logo-panel__dropdown {
   display: flex;
   flex-direction: column;
   position: absolute;
-  padding: 16px;
+  padding: 20px;
   background-color: #fff;
   z-index: 10;
-  border: 1px solid rgba(#263238, 0.24);
+  border: 1px solid rgba(#1A1A1F, 0.04);
   border-radius: 8px;
-  left: -16px;
+  left: -20px;
   top: 100%;
-  margin-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 
   > li + li {
     margin-top: 16px;
@@ -225,17 +251,19 @@ $assets-url: "../../assets";
       white-space: nowrap;
     }
   }
+
+  > svg {
+    width: 18px;
+    height: 5px;
+    fill: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
 }
 
 .logo-panel__nav-item.logo-panel__nav-item--active {
-  color: #454545
-}
-
-.logo-panel__nav-item:not(:last-child) {
-  margin-right: 25px
-}
-
-.logo-panel__nav-item:hover:not(.logo-panel__nav-item--active) {
   color: #454545
 }
 
@@ -263,7 +291,6 @@ $assets-url: "../../assets";
 
 .logo-panel__tel:before {
   font-family: fontello, sans-serif;
-  content: '\E800';
   color: #454545;
   font-size: 22px;
   display: inline;
