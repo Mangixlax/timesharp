@@ -5,19 +5,17 @@
                 <a href="{{ 'index'|page }}" class="logo page-footer__logo"></a>
                 <div class="page-footer__socials">
                     <p>Мы в соц. сетях:</p>
-                    <div class="page-footer__socials-list">
-                        <a
-                            class="page-footer__socials-item page-footer__socials-item--vk"
-                            href="https://vk.com/timesharp"
-                            rel="nofollow"
-                            target="_blank"
-                        ></a>
-                        <a
-                            class="page-footer__socials-item page-footer__socials-item--fb"
-                            href="https://www.facebook.com/timesharp.ru"
-                            rel="nofollow"
-                            target="_blank"
-                        ></a>
+                   <div class="socials">
+                        <a href="https://t.me/+79850818220" target="_blank">
+                            <svg>
+                                <use xlink:href="{{ '/assets/images/svg-icons.svg#telegram' |theme}}" />
+                            </svg>
+                        </a>
+                        <a href="https://chat.whatsapp.com/+79850818220" target="_blank">
+                            <svg>
+                                <use xlink:href="{{ '/assets/images/svg-icons.svg#whatsapp' |theme}}" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -41,29 +39,24 @@
                             <a
                                 href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
                                 class="page-footer__nav-link"
-                                >Заточка парикмахерского и грумерского инструмента</a
                             >
-                            <a
-                                href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
-                                class="page-footer__nav-link"
-                            >
-                                Заточка маникюрного инструмента
+                                Заточка парикмахерского и грумерского инструмента
                             </a>
                         </div>
                     </div>
                     <div class="page-footer__nav-col">
                         <div class="page-footer__nav-contain">
                             <a
-                                href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
+                                href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
                                 class="page-footer__nav-link"
                             >
-                                Заточка различного инструмента
+                                Заточка маникюрного инструмента
                             </a>
                             <a
                                 href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
                                 class="page-footer__nav-link"
                             >
-                                Заточка бытового инструмента и спортивных изделий
+                                Заточка различного инструмента
                             </a>
                         </div>
                     </div>
@@ -77,21 +70,58 @@
                                 О нас
                             </a>
                             <a
-                                href="{{ 'contacts'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                                >Контакты</a
-                            >
-                            <a
-                                href="{{ 'dilivery'|page }}"
+                                href="{{ 'journal/index'|page }}"
                                 class="page-footer__nav-link js-scrollScreen"
                             >
-                                Доставка
+                                Журнал
                             </a>
                             <a
                                 href="{{ 'portfolio/index'|page }}"
                                 class="page-footer__nav-link js-scrollScreen"
                             >
                                 Портфолио
+                            </a>
+                            <a
+                                href="{{ 'garantii'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Гарантии
+                            </a>
+                            <a
+                                href="{{ 'vacancii'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Вакансии
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-footer__nav-col">
+                        <div class="page-footer__nav-contain">
+                            <a
+                                href="{{ 'akcii'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Акции
+                            </a>
+                            <a
+                                href="{{ 'oplata'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Оплата
+                            </a>
+                            <a
+                                href="{{ 'dilivery'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Доставка
+                            </a>
+
+                            <a
+                                href="{{ 'contacts'|page }}"
+                                class="page-footer__nav-link js-scrollScreen"
+                            >
+                                Контакты
                             </a>
                         </div>
                     </div>
@@ -101,7 +131,7 @@
     </div>
     <div class="page-footer__copyright-panel">
         <div class="page-footer__copyright-panel-inner">
-            <p class="page-footer__year">© timesharp, 2023</p>
+            <p class="page-footer__year">© «Время точить», 2023</p>
             <div class="sitemap__footer-wrap">
                 <a href="{{ 'sitemap'|page }}" class="sitemap__footer-link"
                     >Карта сайта</a
@@ -111,8 +141,17 @@
                     rel="nofollow"
                     target="_blank"
                     class="link page-footer__policy-link"
-                    >Политика конфиденциальности</a
                 >
+                    Политика конфиденциальности
+                </a>
+                <a
+                    href="{{ 'polzovatelskoe-soglashenie'|page }}"
+                    rel="nofollow"
+                    target="_blank"
+                    class="link page-footer__policy-link"
+                >
+                    Пользовательское соглашение
+                </a>
             </div>
         </div>
     </div>

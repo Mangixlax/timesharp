@@ -14,7 +14,7 @@
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
                             href="{{ 'about'|page }}"
-                            class="logo-panel__nav-item nav-link"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'about' %} nav-link--active {% endif %}"
                         >
                             о компании
                         </a>
@@ -31,16 +31,17 @@
                             </svg>
                             <li>
                                 <a
-                                    href="{{ 'journal'|page }}"
-                                    class="logo-panel__nav-item nav-link"
+                                    href="{{ 'journal/index'|page }}"
+                                    
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'journal-index' %} nav-link--active {% endif %}"
                                 >
                                     Журнал
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="{{ 'portfolio'|page }}"
-                                    class="logo-panel__nav-item nav-link"
+                                    href="{{ 'portfolio/index'|page }}"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'portfolio-index' %} nav-link--active {% endif %}"
                                 >
                                     Портфолио
                                 </a>
@@ -48,7 +49,7 @@
                             <li>
                                 <a
                                     href="{{ 'garantii'|page }}"
-                                    class="logo-panel__nav-item nav-link"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'garantii' %} nav-link--active {% endif %}"
                                 >
                                     Гарантии
                                 </a>
@@ -56,7 +57,7 @@
                             <li>
                                 <a
                                     href="{{ 'vacancii'|page }}"
-                                    class="logo-panel__nav-item nav-link"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'vakancii' %} nav-link--active {% endif %}"
                                 >
                                     Вакансии
                                 </a>
@@ -66,7 +67,7 @@
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
                             href="{{ 'akcii'|page }}"
-                            class="logo-panel__nav-item js-scrollScreen nav-link"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'akcii' %} nav-link--active {% endif %}"
                         >
                             Акции
                         </a>
@@ -74,7 +75,7 @@
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
                             href="{{ 'oplata'|page }}"
-                            class="logo-panel__nav-item js-scrollScreen nav-link"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'oplata' %} nav-link--active {% endif %}"
                         >
                             Оплата
                         </a>
@@ -82,7 +83,7 @@
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
                             href="{{ 'dilivery'|page }}"
-                            class="logo-panel__nav-item js-scrollScreen"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'dilivery' %} nav-link--active {% endif %}"
                         >
                             Доставка
                         </a>
@@ -90,15 +91,15 @@
                     <li class="logo-panel__nav-item js-scrollScreen">
                         <a
                             href="{{ 'contacts'|page }}"
-                            class="logo-panel__nav-item js-scrollScreen"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'contacts' %} nav-link--active {% endif %}"
                         >
                             Контакты
                         </a>
                     </li>
                 </ul>
             </div>
-            <a href="tel:+74957892513" class="logo-panel__tel js-dct-phone">
-                +7 (495) 789-25-13
+            <a href="tel:+74959092395" class="logo-panel__tel js-dct-phone">
+                +7 (495) 909-23-95
             </a>
             <div class="logo-panel__btn-wrapper">
                 <a
@@ -128,7 +129,7 @@
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'nozhi'|page }}"
-                            class="header-navbar__nav-link"
+                            class="header-navbar__nav-link {% if this.page.id == 'nozhi' %} header-navbar__nav-link--active {% endif %}"
                         >
                             Ножи
                         </a>
@@ -136,7 +137,7 @@
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'nozhnicy'|page }}"
-                            class="header-navbar__nav-link"
+                            class="header-navbar__nav-link {% if this.page.id == 'nozhnicy' %} header-navbar__nav-link--active {% endif %}"
                         >
                             Ножницы
                         </a>
@@ -144,14 +145,15 @@
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
-                            class="header-navbar__nav-link"
-                            >Парикмахерский / Грумерский инструмент</a
+                            class="header-navbar__nav-link {% if this.page.id == 'parikmaherskiy-grumerskiy-instrument' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            Парикмахерский / Грумерский инструмент
+                        </a>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
-                            class="header-navbar__nav-link"
+                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-manikurnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}"
                         >
                             Маникюрный инструмент
                         </a>
@@ -159,9 +161,10 @@
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
-                            class="header-navbar__nav-link"
-                            >Различный инструмент</a
+                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-razlichnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            Различный инструмент
+                        </a>
                     </li>
                 </ul>
             </div>

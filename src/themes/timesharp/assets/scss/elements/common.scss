@@ -1,0 +1,14 @@
+.socials {
+  display: flex;
+  grid-gap: 12px;
+  margin-top: 12px;
+
+  > a {
+    display: flex;
+
+    > svg { 
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

@@ -3,6 +3,7 @@ layout = "default"
 title = "Контакты"
 meta_title = "Контакты"
 ==
+
 <main class="page-main page-contacts">
     <div class="breadcrumbs page-contacts__breadcrumb">
         <div class="breadcrumbs__inner">
@@ -24,19 +25,43 @@ meta_title = "Контакты"
             <h1 class="page-contacts__title">Контакты</h1>
         </div>
     </div>
-    <div class="page-about__about">
-        <div class="page-about__about__inner">
-            <div class="tg page-about__tg">
+    <div class="page-content__wrapper">
+        <div class="page-content__wrapper__inner">
+            <div class="tg page-content__tg">
                 <h3>Как добраться от станции метро Южная:</h3>
-                <p>
-                    Необходимо выйти в город в Выход-2, увидите слева белой 4-х
-                    этажное здание, пройдите 10 метров до забора с вывеской
-                    "Московский радиотехнический институт Российской Академии
-                    Наук", войдите в калитку и поверните налево, пройдите еще 20
-                    метров - вы у цели. Далее звоните нам по телефону и наш
-                    сотрудник вас встретит.
-                </p>
-                
+                <div class="page-contacts__photo-wrapper">
+                    <div class="page-contacts__photo">
+                        <img
+                            src="{{ 'assets/images/contacts/1.jpg' |theme }}"
+                        />
+                        <p>1) Необходимо выйти в город в Выход-2.</p>
+                    </div>
+                    <div class="page-contacts__photo">
+                        <img
+                            src="{{ 'assets/images/contacts/2.jpg' |theme }}"
+                        />
+                        <p>2) Увидите слева белое 4-х этажное здание.</p>
+                    </div>
+                    <div class="page-contacts__photo">
+                        <img
+                            src="{{ 'assets/images/contacts/3.jpg' |theme }}"
+                        />
+                        <p>
+                            3) Пройдите 10 метров до забора с вывеской "Московский
+                            радиотехнический институт Российской Академии Наук",
+                            войдите в калитку и поверните налево,
+                        </p>
+                    </div>
+                    <div class="page-contacts__photo">
+                        <img
+                            src="{{ 'assets/images/contacts/4.jpg' |theme }}"
+                        />
+                        <p>
+                            4) Пройдите еще 20 метров - вы у цели. Далее звоните
+                            нам по телефону и наш сотрудник вас встретит.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -48,7 +73,9 @@ meta_title = "Контакты"
                 </div>
                 <div class="page-contacts__map-popup-contain">
                     <div class="page-contacts__map-popup-block">
-                        <p class="page-contacts__map-popup-title">График работы</p>
+                        <p class="page-contacts__map-popup-title">
+                            График работы
+                        </p>
                         <p class="page-contacts__map-popup-txt">
                             С 09:00 до 18:00, кроме выходных и праздничных дней.
                         </p>
@@ -63,10 +90,41 @@ meta_title = "Контакты"
                     <div class="page-contacts__map-popup-block">
                         <p class="page-contacts__map-popup-title">Телефон</p>
                         <a
-                            href="tel:+74957892513"
+                            href="tel:+74959092395"
                             class="page-contacts__map-phone js-dct-phone"
-                            >8 (495) 789 25-13</a
                         >
+                            8 (495) 909 23-95
+                        </a>
+                    </div>
+                    <div class="page-contacts__map-popup-block">
+                        <p class="page-contacts__map-popup-title">
+                            Служба заботы
+                        </p>
+                        <a
+                            href="tel:+74959092395"
+                            class="page-contacts__map-phone js-dct-phone"
+                        >
+                            +7 (985) 081 82-20
+                        </a>
+                        <div class="socials">
+                            <a href="https://t.me/+79850818220" target="_blank">
+                                <svg>
+                                    <use
+                                        xlink:href="{{ '/assets/images/svg-icons.svg#telegram' |theme}}"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://chat.whatsapp.com/+79850818220"
+                                target="_blank"
+                            >
+                                <svg>
+                                    <use
+                                        xlink:href="{{ '/assets/images/svg-icons.svg#whatsapp' |theme}}"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                     <div class="page-contacts__map-popup-block">
                         <p class="page-contacts__map-popup-title">
@@ -75,10 +133,11 @@ meta_title = "Контакты"
                         <a
                             href="mailto:info@timesharp.ru"
                             class="page-contacts__map-mail"
-                            ><span class="__cf_email__"
-                                >info@timesharp.ru</span
-                            ></a
                         >
+                            <span class="__cf_email__">
+                                info@timesharp.ru
+                            </span>
+                        </a>
                     </div>
                     {#
                     <div class="page-contacts__map-popup-block">

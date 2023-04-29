@@ -2,39 +2,39 @@
   padding: 30px 0 30px 0
 }
 
-.page-about__about {
+.page-content__wrapper {
   padding-bottom: 90px
 }
 
-.tg.page-about__tg h3+p {
+.tg.page-content__tg h3+p {
   margin-top: 15px
 }
 
-.tg.page-about__tg h3+ul {
+.tg.page-content__tg h3+ul {
   margin-top: 15px
 }
 
-.tg.page-about__tg p+h3 {
+.tg.page-content__tg p+h3 {
   margin-top: 40px
 }
 
-.tg.page-about__tg ul+p {
+.tg.page-content__tg ul+p {
   margin-top: 15px
 }
 
 
-.tg.page-about__tg ul+h3 {
+.tg.page-content__tg ul+h3 {
   margin-top: 40px
 }
 
-.tg.page-about__tg p+ul {
+.tg.page-content__tg p+ul {
   margin-top: 15px
 }
 
-.tg.page-about__tg h3+p {
+.tg.page-content__tg h3+p {
   margin-top: 15px
 }
-.tg.page-about__tg {
+.tg.page-content__tg {
    a {
     color: #f05321;
   }
@@ -151,7 +151,7 @@
 }
 
 @media only screen and (max-width:767px) {
-  .page-about__about {
+  .page-content__wrapper {
     padding-bottom: 50px
   }
 

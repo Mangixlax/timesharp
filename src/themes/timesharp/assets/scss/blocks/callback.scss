@@ -139,6 +139,10 @@
   letter-spacing: -.65px
 }
 
+.callback-form__description-info {
+  padding-top: 30px;
+}
+
 .callback-form__description-info-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -149,7 +153,7 @@
   -webkit-align-items: flex-start;
   -moz-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .callback-form__description-info-block:not(:first-child) {

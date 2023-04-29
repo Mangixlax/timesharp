@@ -65,11 +65,27 @@
   padding-bottom: 32px;
   width: 100%;
 
+  &-actual {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+  }
 
-  >table {
+  &-table {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  table {
     width: 100%;
     border-spacing: 1px;
 
+    & + table {
+      margin-top: 32px;
+    }
+    
     th {
       font-size: 18px;
       font-weight: 700;
@@ -283,10 +299,22 @@
 
 @media (max-width:1023px) {
   .dev__item {
-    padding-top: 30px;
     padding-bottom: 24px;
+    padding-top: 4px;
     padding-left: 4px;
-    padding-right: 4px
+    padding-right: 4px;
+
+    &-table { 
+      display: none;
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    table {
+      font-size: 12px;
+    }
   }
 
   .dev__title {
@@ -332,6 +360,6 @@
 
 @media only screen and (max-width:479px) {
   .section-title {
-    font-size: 28px
+    font-size: 24px
   }
 }

@@ -25,7 +25,7 @@ ul {
 .header-navbar__inner,
 .jumbotron__inner,
 .logo-panel__inner,
-.page-about__about__inner,
+.page-content__wrapper__inner,
 .page-clients__clients-inner,
 .page-contacts__hat-inner,
 .page-contacts__map-popup-wrapper,
@@ -47,7 +47,16 @@ ul {
 
 .seo-content {
   width: 100%;
-  padding: 80px 0;
+  padding: 40px 0;
+
+  &-title {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 120%;
+    letter-spacing: -.01em;
+    margin: 0 auto 40px;
+    width: fit-content;
+  }
 }
 
 a,
@@ -286,7 +295,7 @@ h2,
 }
 
 .tg p+h2 {
-  margin-top: 80px
+  margin-top: 64px
 }
 
 .tg h2+p {
@@ -399,7 +408,7 @@ h2,
   .header-navbar__inner,
   .jumbotron__inner,
   .logo-panel__inner,
-  .page-about__about__inner,
+  .page-content__wrapper__inner,
   .page-clients__clients-inner,
   .page-contacts__hat-inner,
   .page-contacts__map-popup-wrapper,
@@ -415,6 +424,10 @@ h2,
     padding-right: 20px
   }
 
+  .page-footer__copyright-panel-inner {
+    padding: 20px;
+  }
+  
   .tg h3,
   .tg>ol>li {
     padding-left: 0;
@@ -483,6 +496,10 @@ h2,
 
   .more-link {
     font-size: 13px
+  }
+  
+  .seo-content {
+    padding: 16px 0;
   }
 }
 

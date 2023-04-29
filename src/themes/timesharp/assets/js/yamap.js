@@ -16,7 +16,7 @@ var panorama = document.getElementById('panorama');
         });
         myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects
-            .add(new ymaps.Placemark([55.620901, 37.610449], {
+            .add(new ymaps.Placemark([55.620490, 37.609650], {
                 balloonContent: '107078, г. Москва, ул. Новорязанская, дом 18, строение 21, этаж П, помещение 25'
             }, {
                 iconLayout: 'default#image',

@@ -36,12 +36,13 @@
 }
 
 .service-card__description {
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Open Sans', sans-serif;
+  color: #fff
 }
 
 .service-card__title {
   font-size: 24px;
-  color: #454545
+  color: #fff
 }
 
 .service-card__link {
@@ -80,14 +81,14 @@
   -moz-box-orient: vertical;
   -moz-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column
+  flex-direction: column;
+  
 }
 
 .service-card:after {
   content: '';
   position: absolute;
   top: 0;
-  display: none;
   bottom: 0;
   left: 0;
   z-index: -1;
@@ -101,7 +102,6 @@
 
 .service-card:before {
   content: '';
-  display: none;
   position: absolute;
   width: 40px;
   height: 40px;
@@ -113,7 +113,7 @@
 }
 
 .service-card__description {
-  color: #8ba4b0;
+  color: #fff;
   font-size: 15px;
   overflow: hidden;
   margin-top: 20px;
@@ -135,7 +135,6 @@
   left: 0;
   right: 0;
   z-index: -1;
-  display: none;
   -o-object-fit: cover;
   object-fit: cover
 }
