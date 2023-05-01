@@ -32,7 +32,6 @@
                             <li>
                                 <a
                                     href="{{ 'journal/index'|page }}"
-                                    
                                     class="logo-panel__nav-item nav-link {% if this.page.id == 'journal-index' %} nav-link--active {% endif %}"
                                 >
                                     Журнал
@@ -104,7 +103,7 @@
             <div class="logo-panel__btn-wrapper">
                 <a
                     href="javascript:void(0)"
-                    class="btn btn--medium btn--primary logo-panel__btn"
+                    class="btn btn--medium btn--primary logo-panel__btn btn--with-blink"
                     data-modal-form-desc="Форма в шапке"
                     data-uk-modal="{target:'#modal-callback', center:true}"
                 >
@@ -173,30 +172,74 @@
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'about'|page }}"
-                            class="header-navbar__nav-link js-scrollScreen"
-                            >О компании</a
+                            class="header-navbar__nav-link {% if this.page.id == 'about' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            О компании
+                        </a>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'journal'|page }}"
-                            class="header-navbar__nav-link js-scrollScreen"
-                            >Журнал</a
+                            class="header-navbar__nav-link {% if this.page.id == 'journal/index' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            Журнал
+                        </a>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'portfolio'|page }}"
-                            class="header-navbar__nav-link js-scrollScreen"
-                            >Портфолио</a
+                            class="header-navbar__nav-link {% if this.page.id == 'portfolio/index' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'garantii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'garantii' %} header-navbar__nav-link--active {% endif %}"
+                        >
+                            Гарантии
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'vacancii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'vacancii' %} header-navbar__nav-link--active {% endif %}"
+                        >
+                            Вакансии
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'akcii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'akcii' %} header-navbar__nav-link--active {% endif %}"
+                        >
+                            Акции
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'oplata'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'oplata' %} header-navbar__nav-link--active {% endif %}"
+                        >
+                            Оплата
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a
+                            href="{{ 'dostavka'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'dostavka' %} header-navbar__nav-link--active {% endif %}"
+                        >
+                            Доставка
+                        </a>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a
                             href="{{ 'contacts'|page }}"
-                            class="header-navbar__nav-link js-scrollScreen"
-                            >Контакты</a
+                            class="header-navbar__nav-link {% if this.page.id == 'contacts' %} header-navbar__nav-link--active {% endif %}"
                         >
+                            Контакты
+                        </a>
                     </li>
                 </ul>
             </div>

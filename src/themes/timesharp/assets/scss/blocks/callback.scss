@@ -398,7 +398,9 @@ h2.callback-form__title {
   }
 
   h2.callback-form__title {
-    font-size: 23px
+    font-size: 23px;
+    padding: 0;
+    text-align: start;
   }
 
   .callback-form__notice {

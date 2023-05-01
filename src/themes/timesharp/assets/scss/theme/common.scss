@@ -56,6 +56,7 @@ ul {
     letter-spacing: -.01em;
     margin: 0 auto 40px;
     width: fit-content;
+    padding: 0 20px;
   }
 }
 
@@ -443,6 +444,9 @@ h2,
   .tg p,
   .tg table {
     font-size: 14px
+  }
+  .tg table th {
+    font-size: 12px;
   }
 
   .tg table td {

@@ -18,8 +18,8 @@ $assets-url: "../../assets";
 }
 
 .page-header.page-header--fix .logo-panel__logo {
-  width: 140px;
-  height: 70px
+  width: 180px;
+  height: 80px
 }
 
 .page-header.page-header--fix .logo-panel__nav {
@@ -68,12 +68,7 @@ $assets-url: "../../assets";
       -webkit-box-pack: justify;
       -moz-box-pack: justify;
       -ms-flex-pack: justify;
-    }
-
-    &-item {
-      & + & {
-        margin-left: 30px
-      }
+      grid-gap: 36px;
     }
   }
 }
@@ -114,8 +109,8 @@ $assets-url: "../../assets";
 }
 
 .logo {
-  width: 162px;
-  height: 70px;
+  width: 180px;
+  height: 80px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -288,7 +283,11 @@ $assets-url: "../../assets";
   font-weight: 500;
   line-height: 1.3em;
   margin-left: auto;
-  text-decoration: none
+  text-decoration: none;
+
+  &:hover {
+    color: #f05321;
+  }
 }
 
 .logo-panel__tel+.logo-panel__btn-wrapper {
@@ -330,7 +329,8 @@ $assets-url: "../../assets";
   .header-navbar__nav-list {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    grid-gap: 0px;
   }
 
   .header-navbar__nav-item {

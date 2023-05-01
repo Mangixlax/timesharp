@@ -4,24 +4,14 @@
     class="uk-form modal-callback__form"
     id="callback-form"
 >
-    <input
-        class="hidden-form_desc"
-        type="hidden"
-        name="form_desc"
-        value=""
-    />
+    <input class="hidden-form_desc" type="hidden" name="form_desc" value="" />
     <div class="form-in">
-        <p class="modal-callback__title">
-            Заказать заточку
-        </p>
+        <p class="modal-callback__title">Заказать заточку</p>
         <div class="modal-callback__form-inner">
-            <div
-                class="modal-callback__input-block input-block"
-            >
-                <label
-                    for="mobile-callback-name1"
-                    class="abs-label"
-                >Как к вам обращаться?</label>
+            <div class="modal-callback__input-block input-block">
+                <label for="mobile-callback-name1" class="abs-label">
+                    ФИО
+                </label>
                 <input
                     type="text"
                     class="input"
@@ -29,19 +19,30 @@
                     id="mobile-callback-name1"
                 />
             </div>
-            <div
-                class="modal-callback__input-block input-block"
-            >
-                <label
-                    for="mobile-callback-phone1"
-                    class="abs-label"
-                >Телефон*</label>
+            <div class="modal-callback__input-block input-block">
+                <label for="mobile-callback-phone1" class="abs-label"
+                    >Телефон*</label
+                >
                 <input
                     type="tel"
                     class="input js-phone-mask"
                     name="phone"
                     id="mobile-callback-phone1"
                 />
+            </div>
+            <div>
+                <label for="mobile-callback-phone1" class="abs-label">
+                    Сообщение (что, как точить и т.п.):
+                </label>
+                <textarea
+                    maxlength="500"
+                    class="textarea"
+                    name="message"
+                    id="mobile-callback-text1"
+                    placeholder="Сообщение"
+                    cols="85"
+                    rows="5"
+                ></textarea>
             </div>
         </div>
         <div class="modal-callback__bottom">
@@ -57,17 +58,13 @@
             <div class="mess"></div>
             <div class="modal-callback__notify">
                 <p>
-                    Нажимая кнопку «<i
-                    class="modal-callback__notify-btnText"
-                >Получить консультацию</i
-                >», вы даете согласие на обработку
-                    своих персональных данных
+                    Нажимая кнопку «<i class="modal-callback__notify-btnText"
+                        >Получить консультацию</i
+                    >», вы даете согласие на обработку своих персональных данных
                     в соответствии с
-                    <a
-                        href="{{ 'policy'|page }}"
-                        rel="nofollow"
-                        target="_blank"
-                    >Политикой конфиденциальности</a>
+                    <a href="{{ 'policy'|page }}" rel="nofollow" target="_blank"
+                        >Политикой конфиденциальности</a
+                    >
                 </p>
             </div>
         </div>
