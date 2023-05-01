@@ -7,33 +7,67 @@ function onSendCallbackForm()
     \Sabr\Toolbox\Classes\TelegramSender::sendMessage($inputs);
 }
 ==
+
 {% apply spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
         {% partial 'site/meta' %}
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                        return;
+                    }
+                }
+                (k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a);
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym"
+            );
+
+            ym(93428006, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+            });
+        </script>
+        <noscript
+            ><div>
+                <img
+                    src="https://mc.yandex.ru/watch/93428006"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
     </head>
     <body class="{{ 'page-' ~ this.page.id }}">
-
         <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
+        <header id="layout-header">{% partial 'site/header' %}</header>
 
         <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
-        
+        <section id="layout-content">{% page %}</section>
+
         <!-- Footer -->
-        <footer id="layout-footer">
-            {% partial 'site/footer' %}
-        </footer>
+        <footer id="layout-footer">{% partial 'site/footer' %}</footer>
 
-        {% partial 'modals/callback' %}
-
-        {% framework extras %}
-        {% scripts %}
+        {% partial 'modals/callback' %} {% framework extras %} {% scripts %}
 
         <script src="{{ [
             'assets/js/vendor.js',
@@ -41,7 +75,10 @@ function onSendCallbackForm()
             'assets/js/yamap.js',
         ]|theme }}"></script>
 
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+            type="text/javascript"
+        ></script>
     </body>
 </html>
 {% endapply %}
