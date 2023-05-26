@@ -11,7 +11,8 @@
   max-width: 1155px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 70px
+  margin-bottom: 70px;
+  flex-direction: column;
 }
 
 .detail__time {
@@ -19,7 +20,8 @@
   padding-top: 32px;
   font-size: 18px;
   line-height: 26px;
-  font-weight: 700
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .detail__wrapper h2 {

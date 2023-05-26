@@ -1,18 +1,19 @@
-##
 description = "Default layout"
 ==
+<?php
 function onSendCallbackForm()
 {
     $inputs = \Request::only(['form_desc', 'name', 'phone', 'message']);
     \Sabr\Toolbox\Classes\TelegramSender::sendMessage($inputs);
 }
+?>
 ==
-
 {% apply spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
-        {% partial 'site/meta' %}
+        {% partial 'site/meta' meta_keywords=placeholder('meta_keywords') %}
+        
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {

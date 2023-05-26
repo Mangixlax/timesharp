@@ -1,7 +1,8 @@
 url = "/journal/:slug"
 layout = "default"
 title = "Детальная страница Журнала"
-meta_title = "{{ newsPost.title }} - Журнал"
+meta_title = "{{ newsPost.seo_title }}"
+meta_description = "{{ newsPost.seo_description }}"
 
 [section newsPost]
 handle = "News\Post"
@@ -10,6 +11,10 @@ entrySlug = "{{ :slug }}"
 [collection news]
 handle = "News\Post"
 ==
+{% put meta_keywords %}
+    {{ newsPost.seo_keywords }}
+{% endput %}
+
 {% if newsPost is empty %}
     {% do abort(404) %}
 {% endif %}
