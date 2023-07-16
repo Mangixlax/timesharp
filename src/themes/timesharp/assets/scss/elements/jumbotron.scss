@@ -172,3 +172,14 @@
 .jumbotron__callback-txt span:last-child {
   letter-spacing: 1.04px
 }
+
+@media (max-width: 768px) {
+  .jumbotron__title {
+    font-size: 28px;
+    text-align: start;
+  }
+
+  .jumbotron__subtitle {
+    text-align: start ;
+  }
+}
