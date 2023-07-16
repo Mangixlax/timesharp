@@ -27,7 +27,7 @@
   align-items: center
 }
 
-.jumbotron.page-seo__jumbotron {
+.jumbotron.page-nozhnicy__jimbotron {
   min-height: 385px
 }
 
@@ -46,7 +46,7 @@
   background-image: url(../../assets/images/bg/audit-bg.jpg)
 }
 
-.page-seo__jumbotron {
+.page-nozhnicy__jimbotron {
   background-image: url(../../assets/images/bg/seo-bg.jpg)
 }
 
@@ -74,8 +74,20 @@
   background-image: url(../../assets/images/bg/nozhi.jpg)
 }
 
+.page-dopuslugi__jumbotron {
+  background-image: url(../../assets/images/bg/dopolnitelnye-uslugi.jpg)
+}
+
 .page-webdev__jumbotron {
   background-image: url(../../assets/images/bg/webdev-bg.jpg)
+}
+
+.page-sobsproizvodstvo__jumbotron {
+  background-image: url(../../assets/images/bg/sobstvennoe-proizvodstvo.jpg)
+}
+
+.page-med__jumbotron {
+  background-image: url(../../assets/images/bg/medicinskiy.jpg)
 }
 
 .jumbotron__title {

@@ -168,7 +168,6 @@ h2,
   letter-spacing: -.65px;
   color: #454545;
   position: relative;
-  padding-left: 38px
 }
 
 .tg h3:after,
@@ -512,4 +511,10 @@ h2,
   src: url(/themes/timesharp/assets/fonts/fontello.woff) format("woff");
   font-weight: 400;
   font-style: normal
+}
+
+@media (max-width: 768px) {
+  .seo-advancement__inner {
+    padding: 15px;
+  }
 }

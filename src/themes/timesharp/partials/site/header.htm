@@ -3,95 +3,68 @@
 <header class="page-header" id="page-header">
     <div class="logo-panel" id="logo-panel">
         <div class="logo-panel__inner">
-            <a
-                href="{{ 'index'|page }}"
-                class="logo logo-panel__logo"
-                role="img"
-                title="logoHeader"
-            ></a>
+            <a href="{{ 'index'|page }}" class="logo logo-panel__logo" role="img" title="logoHeader"></a>
             <div>
                 <ul class="logo-panel__nav">
                     <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'about'|page }}"
-                            class="logo-panel__nav-item nav-link {% if this.page.id == 'about' %} nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'about'|page }}"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'about' %} nav-link--active {% endif %}">
                             о компании
                         </a>
                         <svg>
-                            <use
-                                xlink:href="{{ 'assets/images/svg-icons.svg#dropdown-menu'|theme }}"
-                            ></use>
+                            <use xlink:href="{{ 'assets/images/svg-icons.svg#dropdown-menu'|theme }}"></use>
                         </svg>
                         <ul class="logo-panel__dropdown">
                             <svg>
-                                <use
-                                    xlink:href="{{ 'assets/images/svg-icons.svg#up'|theme }}"
-                                ></use>
+                                <use xlink:href="{{ 'assets/images/svg-icons.svg#up'|theme }}"></use>
                             </svg>
                             <li>
-                                <a
-                                    href="{{ 'journal/index'|page }}"
-                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'journal-index' %} nav-link--active {% endif %}"
-                                >
+                                <a href="{{ 'journal/index'|page }}"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'journal-index' %} nav-link--active {% endif %}">
                                     Журнал
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="{{ 'portfolio/index'|page }}"
-                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'portfolio-index' %} nav-link--active {% endif %}"
-                                >
+                                <a href="{{ 'portfolio/index'|page }}"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'portfolio-index' %} nav-link--active {% endif %}">
                                     Портфолио
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="{{ 'garantii'|page }}"
-                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'garantii' %} nav-link--active {% endif %}"
-                                >
+                                <a href="{{ 'garantii'|page }}"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'garantii' %} nav-link--active {% endif %}">
                                     Гарантии
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="{{ 'vacancii'|page }}"
-                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'vakancii' %} nav-link--active {% endif %}"
-                                >
+                                <a href="{{ 'vacancii'|page }}"
+                                    class="logo-panel__nav-item nav-link {% if this.page.id == 'vakancii' %} nav-link--active {% endif %}">
                                     Вакансии
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'akcii'|page }}"
-                            class="logo-panel__nav-item nav-link {% if this.page.id == 'akcii' %} nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'akcii'|page }}"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'akcii' %} nav-link--active {% endif %}">
                             Акции
                         </a>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'oplata'|page }}"
-                            class="logo-panel__nav-item nav-link {% if this.page.id == 'oplata' %} nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'oplata'|page }}"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'oplata' %} nav-link--active {% endif %}">
                             Оплата
                         </a>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'dilivery'|page }}"
-                            class="logo-panel__nav-item nav-link {% if this.page.id == 'dilivery' %} nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'dilivery'|page }}"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'dilivery' %} nav-link--active {% endif %}">
                             Доставка
                         </a>
                     </li>
                     <li class="logo-panel__nav-item js-scrollScreen">
-                        <a
-                            href="{{ 'contacts'|page }}"
-                            class="logo-panel__nav-item nav-link {% if this.page.id == 'contacts' %} nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'contacts'|page }}"
+                            class="logo-panel__nav-item nav-link {% if this.page.id == 'contacts' %} nav-link--active {% endif %}">
                             Контакты
                         </a>
                     </li>
@@ -101,20 +74,12 @@
                 +7 (495) 909-23-95
             </a>
             <div class="logo-panel__btn-wrapper">
-                <a
-                    href="javascript:void(0)"
-                    class="btn btn--medium btn--primary logo-panel__btn btn--with-blink"
-                    data-modal-form-desc="Форма в шапке"
-                    data-uk-modal="{target:'#modal-callback', center:true}"
-                >
+                <a href="javascript:void(0)" class="btn btn--medium btn--primary logo-panel__btn btn--with-blink"
+                    data-modal-form-desc="Форма в шапке" data-uk-modal="{target:'#modal-callback', center:true}">
                     Заказать заточку
                 </a>
             </div>
-            <button
-                class="logo-panel__burger hamburger hamburger--spin"
-                id="hamburger"
-                type="button"
-            >
+            <button class="logo-panel__burger hamburger hamburger--spin" id="hamburger" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -126,118 +91,117 @@
             <div class="header-navbar__nav">
                 <ul class="header-navbar__nav-list">
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'nozhi'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'nozhi' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'nozhi'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'nozhi' %} header-navbar__nav-link--active {% endif %}">
                             Ножи
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'nozhnicy'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'nozhnicy' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'nozhnicy'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'nozhnicy' %} header-navbar__nav-link--active {% endif %}">
                             Ножницы
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'parikmaherskiy-grumerskiy-instrument' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'parikmaherskiy-grumerskiy-instrument' %} header-navbar__nav-link--active {% endif %}">
                             Парикмахерский / Грумерский инструмент
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-manikurnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-manikurnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}">
                             Маникюрный инструмент
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-razlichnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'zatochka-razlichnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}">
                             Различный инструмент
                         </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
+                        <a href="{{ 'dopolnitelnye-uslugi'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'dopolnitelnye-uslugi' %} header-navbar__nav-link--active {% endif %}">
+                            Дополнительные услуги
+
+                        </a>
+                        <svg>
+                            <use xlink:href="{{ 'assets/images/svg-icons.svg#dropdown-menu'|theme }}"></use>
+                        </svg>
+                        <ul class="logo-panel__dropdown">
+                            <svg>
+                                <use xlink:href="{{ 'assets/images/svg-icons.svg#up'|theme }}"></use>
+                            </svg>
+                            <li>
+                                <a href="{{ 'sobstvennoe-proizvodstvo'|page }}"
+                                    class="logo-panel__nav-item {% if this.page.id == 'sobstvennoe-proizvodstvo' %} nav-link--active {% endif %} header-navbar__nav-link">
+                                    Собственное производство
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ 'zatochka-medicinskogo-instrumenta'|page }}"
+                                    class="logo-panel__nav-item {% if this.page.id == 'zatochka-medicinskogo-instrumenta' %} nav-link--active {% endif %} header-navbar__nav-link">
+                                    Медицинский инструмент
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
             <div class="header-navbar__mobile-nav">
                 <ul class="header-navbar__nav-list">
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'about'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'about' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'about'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'about' %} header-navbar__nav-link--active {% endif %}">
                             О компании
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'journal'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'journal/index' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'journal'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'journal/index' %} header-navbar__nav-link--active {% endif %}">
                             Журнал
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'portfolio'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'portfolio/index' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'portfolio'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'portfolio/index' %} header-navbar__nav-link--active {% endif %}">
                             Портфолио
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'garantii'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'garantii' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'garantii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'garantii' %} header-navbar__nav-link--active {% endif %}">
                             Гарантии
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'vacancii'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'vacancii' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'vacancii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'vacancii' %} header-navbar__nav-link--active {% endif %}">
                             Вакансии
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'akcii'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'akcii' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'akcii'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'akcii' %} header-navbar__nav-link--active {% endif %}">
                             Акции
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'oplata'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'oplata' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'oplata'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'oplata' %} header-navbar__nav-link--active {% endif %}">
                             Оплата
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'dostavka'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'dostavka' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'dostavka'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'dostavka' %} header-navbar__nav-link--active {% endif %}">
                             Доставка
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
-                        <a
-                            href="{{ 'contacts'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'contacts' %} header-navbar__nav-link--active {% endif %}"
-                        >
+                        <a href="{{ 'contacts'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'contacts' %} header-navbar__nav-link--active {% endif %}">
                             Контакты
                         </a>
                     </li>

@@ -34,7 +34,6 @@ $assets-url: "../../assets";
   background-color: #fff;
   position: relative;
   z-index: 2;
-  overflow: auto !important
 }
 
 .header-navbar__mobile-nav {
@@ -49,7 +48,7 @@ $assets-url: "../../assets";
   -moz-box-shadow: none;
   box-shadow: none;
   padding: 0 0 20px 0;
-  
+
 }
 
 .page-header.page-header--abs {
@@ -70,6 +69,32 @@ $assets-url: "../../assets";
       -ms-flex-pack: justify;
       grid-gap: 36px;
     }
+
+    &-item {
+      position: relative;
+
+      >svg {
+        height: 12px;
+        width: 12px;
+        transition: transform 0.3s ease;
+      }
+
+
+      &:hover {
+        color: #f05321;
+
+        & .logo-panel__dropdown {
+          opacity: 1;
+          pointer-events: all;
+          z-index: 10000;
+          white-space: nowrap;
+        }
+
+        >svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
 
@@ -83,7 +108,7 @@ $assets-url: "../../assets";
 
 .nav-link--active {
   color: rgba(#f05321, 0.86) !important;
-  font-weight: 700 !important; 
+  font-weight: 700 !important;
 }
 
 .header-navbar__nav-link {
@@ -191,7 +216,7 @@ $assets-url: "../../assets";
   align-items: center;
   padding-top: 4px;
 
-  > li:not(:last-child) {
+  >li:not(:last-child) {
     margin-right: 25px;
   }
 }
@@ -218,12 +243,12 @@ $assets-url: "../../assets";
       pointer-events: all;
     }
 
-    > svg {
+    >svg {
       transform: rotate(180deg);
     }
   }
-  
-  > svg {
+
+  >svg {
     height: 12px;
     width: 12px;
     transition: transform 0.3s ease;
@@ -244,16 +269,18 @@ $assets-url: "../../assets";
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  padding-right: 40px;
+  min-width: calc(100% + 20px);
 
-  > li + li {
+  >li+li {
     margin-top: 16px;
 
-    > a {
+    >a {
       white-space: nowrap;
     }
   }
 
-  > svg {
+  >svg {
     width: 18px;
     height: 5px;
     fill: white;

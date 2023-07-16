@@ -5,18 +5,24 @@
                 <a href="{{ 'index'|page }}" class="logo page-footer__logo"></a>
                 <div class="page-footer__socials">
                     <p>Мы в соц. сетях:</p>
-                   <div class="socials">
-                        <a href="https://t.me/+79850818220" target="_blank">
-                            <svg>
-                                <use xlink:href="{{ '/assets/images/svg-icons.svg#telegram' |theme}}" />
-                            </svg>
-                        </a>
-                        <a href="https://chat.whatsapp.com/+79850818220" target="_blank">
-                            <svg>
-                                <use xlink:href="{{ '/assets/images/svg-icons.svg#whatsapp' |theme}}" />
-                            </svg>
-                        </a>
-                    </div>
+                    <ul class="socials">
+                        <li>
+                            <a href="https://t.me/timesharp_info" target="_blank">
+                                <svg>
+                                    <use xlink:href="{{ '/assets/images/svg-icons.svg#telegram' |theme}}" />
+                                </svg>
+                            </a>
+                            Telegram канал компании
+                        </li>
+                        <li>
+                            <a href="https://chat.whatsapp.com/+79850818220" target="_blank">
+                                <svg>
+                                    <use xlink:href="{{ '/assets/images/svg-icons.svg#whatsapp' |theme}}" />
+                                </svg>
+                            </a>
+                            Чат Wantsap с компанией
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="page-footer__nav">
@@ -24,132 +30,88 @@
                     <div class="page-footer__nav-col">
                         <p class="page-footer__nav-title">Услуги</p>
                         <div class="page-footer__nav-contain">
-                            <a
-                                href="{{ 'nozhi'|page }}"
-                                class="page-footer__nav-link"
-                            >
+                            <a href="{{ 'nozhi'|page }}" class="page-footer__nav-link">
                                 Заточка ножей
                             </a>
-                            <a
-                                href="{{ 'nozhnicy'|page }}"
-                                class="page-footer__nav-link"
-                            >
+                            <a href="{{ 'nozhnicy'|page }}" class="page-footer__nav-link">
                                 Заточка ножниц
                             </a>
-                            <a
-                                href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}"
-                                class="page-footer__nav-link"
-                            >
+                            <a href="{{ 'parikmaherskiy-grumerskiy-instrument'|page }}" class="page-footer__nav-link">
                                 Заточка парикмахерского и грумерского инструмента
+                            </a>
+                            <a href="{{ 'dopolnitelnye uslugi'|page }}" class="page-footer__nav-link">
+                                Дополнительные услуги
                             </a>
                         </div>
                     </div>
                     <div class="page-footer__nav-col">
                         <div class="page-footer__nav-contain">
-                            <a
-                                href="{{ 'zatochka-manikurnogo-instrumenta'|page }}"
-                                class="page-footer__nav-link"
-                            >
+                            <a href="{{ 'zatochka-manikurnogo-instrumenta'|page }}" class="page-footer__nav-link">
                                 Заточка маникюрного инструмента
                             </a>
-                            <a
-                                href="{{ 'zatochka-razlichnogo-instrumenta'|page }}"
-                                class="page-footer__nav-link"
-                            >
+                            <a href="{{ 'zatochka-medicinskogo-instrumenta'|page }}" class="page-footer__nav-link">
+                                Заточка медицинского инструмента
+                            </a>
+                            <a href="{{ 'zatochka-razlichnogo-instrumenta'|page }}" class="page-footer__nav-link">
                                 Заточка различного инструмента
+                            </a>
+                            <a href="{{ 'sobstvennoe-proizvodstvo'|page }}" class="page-footer__nav-link">
+                                Собственное производство
                             </a>
                         </div>
                     </div>
                     <div class="page-footer__nav-col">
                         <p class="page-footer__nav-title">Компания</p>
                         <div class="page-footer__nav-contain">
-                            <a
-                                href="{{ 'about'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
+                            <a href="{{ 'about'|page }}" class="page-footer__nav-link js-scrollScreen">
                                 О нас
                             </a>
-                            <a
-                                href="{{ 'journal/index'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
+                            <a href="{{ 'journal/index'|page }}" class="page-footer__nav-link js-scrollScreen">
                                 Журнал
                             </a>
-                            <a
-                                href="{{ 'portfolio/index'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
+                            <a href="{{ 'portfolio/index'|page }}" class="page-footer__nav-link js-scrollScreen">
                                 Портфолио
                             </a>
-                            <a
-                                href="{{ 'garantii'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
+                            <a href="{{ 'garantii'|page }}" class="page-footer__nav-link js-scrollScreen">
                                 Гарантии
                             </a>
-                            <a
-                                href="{{ 'vacancii'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
+                            <a href="{{ 'vacancii'|page }}" class="page-footer__nav-link js-scrollScreen">
                                 Вакансии
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="page-footer__nav-col">
-                        <div class="page-footer__nav-contain">
-                            <a
-                                href="{{ 'akcii'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
-                                Акции
-                            </a>
-                            <a
-                                href="{{ 'oplata'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
-                                Оплата
-                            </a>
-                            <a
-                                href="{{ 'dilivery'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
-                                Доставка
-                            </a>
+                    <div class="page-footer__nav-contain">
+                        <a href="{{ 'akcii'|page }}" class="page-footer__nav-link js-scrollScreen">
+                            Акции
+                        </a>
+                        <a href="{{ 'oplata'|page }}" class="page-footer__nav-link js-scrollScreen">
+                            Оплата
+                        </a>
+                        <a href="{{ 'dilivery'|page }}" class="page-footer__nav-link js-scrollScreen">
+                            Доставка
+                        </a>
 
-                            <a
-                                href="{{ 'contacts'|page }}"
-                                class="page-footer__nav-link js-scrollScreen"
-                            >
-                                Контакты
-                            </a>
-                        </div>
+                        <a href="{{ 'contacts'|page }}" class="page-footer__nav-link js-scrollScreen">
+                            Контакты
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <div class="page-footer__copyright-panel">
         <div class="page-footer__copyright-panel-inner">
             <p class="page-footer__year">© «Время точить», 2023</p>
             <div class="sitemap__footer-wrap">
-                <a href="{{ 'sitemap'|page }}" class="sitemap__footer-link"
-                    >Карта сайта</a
-                >
-                <a
-                    href="{{ 'policy'|page }}"
-                    rel="nofollow"
-                    target="_blank"
-                    class="link page-footer__policy-link"
-                >
+                <a href="{{ 'sitemap'|page }}" class="sitemap__footer-link">Карта сайта</a>
+                <a href="{{ 'policy'|page }}" rel="nofollow" target="_blank" class="link page-footer__policy-link">
                     Политика конфиденциальности
                 </a>
-                <a
-                    href="{{ 'polzovatelskoe-soglashenie'|page }}"
-                    rel="nofollow"
-                    target="_blank"
-                    class="link page-footer__policy-link"
-                >
+                <a href="{{ 'polzovatelskoe-soglashenie'|page }}" rel="nofollow" target="_blank"
+                    class="link page-footer__policy-link">
                     Пользовательское соглашение
                 </a>
             </div>
