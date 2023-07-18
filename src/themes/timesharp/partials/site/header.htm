@@ -119,6 +119,20 @@
                             class="header-navbar__nav-link {% if this.page.id == 'zatochka-razlichnogo-instrumenta' %} header-navbar__nav-link--active {% endif %}">
                             Различный инструмент
                         </a>
+                        <svg>
+                            <use xlink:href="{{ 'assets/images/svg-icons.svg#dropdown-menu'|theme }}"></use>
+                        </svg>
+                        <ul class="logo-panel__dropdown">
+                            <svg>
+                                <use xlink:href="{{ 'assets/images/svg-icons.svg#up'|theme }}"></use>
+                            </svg>
+                            <li>
+                                <a href="{{ 'zatochka-medicinskogo-instrumenta'|page }}"
+                                    class="logo-panel__nav-item {% if this.page.id == 'zatochka-medicinskogo-instrumenta' %} nav-link--active {% endif %} header-navbar__nav-link">
+                                    Медицинский инструмент
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="header-navbar__nav-item">
                         <a href="{{ 'dopolnitelnye-uslugi'|page }}"
@@ -137,12 +151,6 @@
                                 <a href="{{ 'sobstvennoe-proizvodstvo'|page }}"
                                     class="logo-panel__nav-item {% if this.page.id == 'sobstvennoe-proizvodstvo' %} nav-link--active {% endif %} header-navbar__nav-link">
                                     Собственное производство
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ 'zatochka-medicinskogo-instrumenta'|page }}"
-                                    class="logo-panel__nav-item {% if this.page.id == 'zatochka-medicinskogo-instrumenta' %} nav-link--active {% endif %} header-navbar__nav-link">
-                                    Медицинский инструмент
                                 </a>
                             </li>
                         </ul>

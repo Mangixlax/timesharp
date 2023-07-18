@@ -67,7 +67,7 @@ $assets-url: "../../assets";
       -webkit-box-pack: justify;
       -moz-box-pack: justify;
       -ms-flex-pack: justify;
-      grid-gap: 36px;
+      grid-gap: 28px;
     }
 
     &-item {
@@ -271,7 +271,8 @@ $assets-url: "../../assets";
   transition: all 0.3s ease;
   padding-right: 40px;
   min-width: calc(100% + 20px);
-
+  white-space: nowrap;
+  
   >li+li {
     margin-top: 16px;
 
@@ -332,6 +333,14 @@ $assets-url: "../../assets";
 
 
 @media only screen and (max-width:1220px) {
+  .header-navbar__nav-link {
+    font-size: 11px;
+  }
+
+  .header-navbar__nav-list {
+    grid-gap: 11px;
+  }
+
   .logo-panel__btn-wrapper {
     display: none
   }
@@ -446,6 +455,7 @@ $assets-url: "../../assets";
 }
 
 @media only screen and (max-width:767px) {
+
   .logo-panel {
     height: 70px
   }
