@@ -59,6 +59,11 @@
   -ms-flex-pack: justify;
   width: 100%;
   grid-gap: 24px;
+
+  a {
+    color: #f05321;
+    text-decoration: none;
+  }
 }
 
 .dev__wrapper--margin {
