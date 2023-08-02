@@ -285,8 +285,17 @@
 }
 
 .case__news {
-  background-image: url(../images/news-bg.jpg);
-  min-height: 390px
+  background-image: url(../images/bg/portfolio.jpg);
+  background-repeat: repeat !important;
+  background-size: 500px 500px !important;
+  height: 400px;
+}
+
+.case__portfolio {
+  background-image: url(../images/bg/portfolio.jpg);
+  background-repeat: repeat !important;
+  background-size: 500px 500px !important;
+  height: 400px;
 }
 
 .case__task {

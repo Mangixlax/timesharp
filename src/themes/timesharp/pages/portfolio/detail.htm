@@ -51,7 +51,7 @@ function onStart() {
             </div>
         </div>
     </div>
-    <div class="jumbotron case__news">
+    <div class="jumbotron case__portfolio">
         <div class="jumbotron__inner">
             <h1 class="jumbotron__title">
                  {{ portfolioWork.title }}
@@ -60,7 +60,7 @@ function onStart() {
     </div>
     <div class="detail__wrapper">
         {% set publishedDate = portfolioWork.published_at is not empty ? portfolioWork.published_at : portfolioWork.created_at %}
-        <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div>
+        <!-- <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div> -->
         {{ portfolioWork.content | raw }}
     </div>
     {% if morePosts is not empty %}
@@ -68,7 +68,7 @@ function onStart() {
         <div class="clients__wrapper">
             <div class="case__similar">Еще записи</div>
             {% for post in morePosts %}
-                {% partial 'news/post-card' post=post %}
+                {% partial 'portfolio/portfolio-card' work=portfolioWork %}
             {% endfor %}
         </div>
         <a href="{{ 'journal/index' | page }}" class="btn btn--outline btn--medium about__detailed-btn">ВСЕ ЗАПИСИ</a>

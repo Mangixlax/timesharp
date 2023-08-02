@@ -52,7 +52,7 @@ handle = "News\Post"
     </div>
     <div class="detail__wrapper">
         {% set publishedDate = newsPost.published_at is not empty ? newsPost.published_at : newsPost.created_at %}
-        <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div>
+        <!-- <div class="detail__time">{{ publishedDate | date('d.m.Y') }}</div> -->
         {{ newsPost.content | raw }}
     </div>
     {% if morePosts is not empty %}
