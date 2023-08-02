@@ -27,7 +27,7 @@ function onStart() {
     {% do abort(404) %}
 {% endif %}
 
-{% set morePosts = portfolioWorks.whereNot('id', portfolioWork.id).paginate(3) %}
+{% set morePosts = portfolioWorks.whereNot('id', portfolioWork.id).paginate(4) %}
 
 <main class="page-main page-seo">
     <div class="breadcrumbs breadcrumbs--service page-seo__breadcrumb">
