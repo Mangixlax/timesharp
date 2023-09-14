@@ -99,6 +99,10 @@
     font-size: 18px;
     display: block;
     text-align: center;
+
+    &--red {
+      color: red;
+    }
   }
 
   &-price {
