@@ -1,16 +1,17 @@
-FROM debian:buster
+FROM debian:jessie
 
+# Установите необходимые зависимости
 RUN apt-get update && apt-get install -y cron bash wget certbot
 
-RUN mkdir -p /webroots/tols/.well-known /scripts
-
+# Создайте каталог для скрипта обновления сертификатов
+RUN mkdir -p /scripts
 WORKDIR /scripts
-COPY certbot-auto certbot-auto
-RUN chmod a+x ./certbot-auto
 
-VOLUME /webroots
-VOLUME /etc/letsencrypt
+# Добавьте скрипт для обновления сертификатов
+COPY renew-certificates.sh /scripts/
+RUN chmod +x /scripts/renew-certificates.sh
 
-RUN echo "0 0 1 * * root /usr/bin/certbot renew" >/etc/cron.d/certbot
+# Добавьте задачу cron для автоматического обновления сертификатов
+RUN echo "0 0 1 * * root /scripts/renew-certificates.sh" >/etc/cron.d/renew-certificates
 
 CMD [ "cron", "-f" ]
