@@ -27,8 +27,8 @@ services:
       POSTGRES_USER: pguser
       POSTGRES_PASSWORD: pgpass
   certbot:
-    build: docker/prod/certbot
-    image: certbot/certbot
+    build: ./docker/prod/certbot
+    image: certbot-custom
     restart: always
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
