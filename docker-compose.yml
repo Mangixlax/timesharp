@@ -4,7 +4,7 @@ services:
   backend:
     env_file: ./docker/.env
     build:
-      context: docker/local
+      context: docker/prod
       dockerfile: Dockerfile
       args:
         - USER
@@ -26,18 +26,30 @@ services:
       POSTGRES_DB: common
       POSTGRES_USER: pguser
       POSTGRES_PASSWORD: pgpass
+  certbot:
+    build: ./docker/prod/certbot
+    image: certbot-custom
+    restart: always
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
+    depends_on:
+      - nginx
   nginx:
     image: nginx:1.19.10-alpine
     restart: on-failure:10
     ports:
       - '80:80'
+      - '443:443'
     volumes:
       - ./src:/var/www/html/backend
-      - ./docker/local/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./docker/prod/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
     env_file: ./docker/.env
     expose:
       - 80
-    command: ["nginx", "-g", "daemon off;"]
+    command: [ "nginx", "-g", "daemon off;" ]
     depends_on:
       - backend
 
