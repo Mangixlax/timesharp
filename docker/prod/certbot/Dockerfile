@@ -2,7 +2,7 @@
 FROM debian:buster
 
 # Установите необходимые пакеты
-RUN apt-get update && apt-get install -y cron certbot
+RUN apt-get update && apt-get install -y cron certbot nano 
 
 # Создайте каталог для скрипта обновления сертификатов
 RUN mkdir -p /scripts
