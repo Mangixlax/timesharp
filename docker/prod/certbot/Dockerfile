@@ -1,17 +1,16 @@
-FROM debian:jessie
-
-# Установите необходимые зависимости
-RUN apt-get update && apt-get install -y cron bash wget certbot
+# Используйте базовый образ с Certbot
+FROM certbot/certbot
 
 # Создайте каталог для скрипта обновления сертификатов
 RUN mkdir -p /scripts
 WORKDIR /scripts
 
-# Добавьте скрипт для обновления сертификатов
+# Добавьте скрипт для автоматического обновления сертификатов
 COPY renew-certificates.sh /scripts/
 RUN chmod +x /scripts/renew-certificates.sh
 
-# Добавьте задачу cron для автоматического обновления сертификатов
-RUN echo "0 0 1 * * root /scripts/renew-certificates.sh" >/etc/cron.d/renew-certificates
+# Добавьте задачу cron для автоматического обновления сертификатов при запуске контейнера
+RUN echo "@reboot /scripts/renew-certificates.sh" >> /etc/crontabs/root
 
-CMD [ "cron", "-f" ]
+# Запустите cron в фоновом режиме
+CMD ["crond", "-f"]
