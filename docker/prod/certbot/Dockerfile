@@ -1,5 +1,5 @@
 # Используйте базовый образ с Certbot
-FROM certbot/certbot
+FROM debian:buster
 
 # Создайте каталог для скрипта обновления сертификатов
 RUN mkdir -p /scripts
