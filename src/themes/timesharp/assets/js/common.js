@@ -52,27 +52,16 @@
             a.click(function (t) {
                 e.trigger("next.owl.carousel");
             }),
-            d
-                ? e.owlCarousel({
-                      items: 1,
-                      dots: !1,
-                      nav: !1,
-                      autoplay: !0,
-                      autoWidth: !1,
-                      mouseDrag: !1,
-                      touchDrag: !0,
-                      loop: !0,
-                      margin: 0,
-                  })
-                : e.owlCarousel({
-                      items: 1,
-                      dots: !1,
-                      nav: !1,
-                      autoplay: !0,
-                      autoWidth: !1,
-                      loop: !0,
-                      margin: 0,
-                  });
+            e.owlCarousel({
+                autoplay:true,
+                autoplayTimeout: 8000,
+                items: 1,
+                dots: !1,
+                mouseDrag: true,
+                loop: true,
+                navigation: true,
+                pagination: true,
+            });
     }
     function s() {
         const e = t.getElementById("page-header"),
@@ -278,8 +267,10 @@
                 v = u.text(),
                 b = f.text();
             $(document).on("click", "[data-uk-modal]", function () {
-                if ($(this).attr('data-modal-form-desc')) {
-                    $('#callback-form').find('.hidden-form_desc').val($(this).data('modal-form-desc'));
+                if ($(this).attr("data-modal-form-desc")) {
+                    $("#callback-form")
+                        .find(".hidden-form_desc")
+                        .val($(this).data("modal-form-desc"));
                 }
 
                 if ($(this).attr("data-modal-title")) {
@@ -291,7 +282,7 @@
                     p.html($(this).data("modal-btn-text"));
                 }
 
-                $(this).attr("data-modal-title") || u.html(v)
+                $(this).attr("data-modal-title") || u.html(v);
 
                 $(this).attr("data-modal-btn-text") || (f.html(b), p.html(b));
             }),
@@ -325,7 +316,7 @@
                                     "#modal-callback .modal-callback__input-block input"
                                 ).val(""));
                     },
-                })
+                });
         }),
         e.addEventListener("scroll", function () {
             i();

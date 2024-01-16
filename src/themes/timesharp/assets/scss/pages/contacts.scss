@@ -10,6 +10,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(2, 500px);
       padding: 46px 0;
+      grid-row-gap: 24px;
     }
     
     img {

@@ -297,7 +297,7 @@ $assets-url: "../../assets";
 }
 
 .logo-panel__tel {
-  color: #454545;
+  color: #f05321;
   display: inline;
   vertical-align: middle;
   -webkit-box-align: center;
@@ -305,7 +305,6 @@ $assets-url: "../../assets";
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px dotted #454545;
   padding-bottom: 2px;
   font-size: 18px;
   font-weight: 500;
@@ -506,24 +505,24 @@ $assets-url: "../../assets";
   }
 }
 
-@media only screen and (min-width:480px) {
-  .logo-panel__tel {
-    background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
-    background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
-    -webkit-background-clip: text;
-    color: transparent
-  }
+// @media only screen and (min-width:480px) {
+//   .logo-panel__tel {
+//     background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+//     background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
+//     -webkit-background-clip: text;
+//     color: transparent
+//   }
 
-  .logo-panel__tel:before {
-    background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
-    background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
-    background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
-    -webkit-background-clip: text;
-    color: transparent
-  }
-}
+//   .logo-panel__tel:before {
+//     background-image: -webkit-gradient(linear, left top, right top, from(#454545), to(#9a9a9a));
+//     background-image: -webkit-linear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: -moz- oldlinear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: -o-linear-gradient(left, #454545 0, #9a9a9a 100%);
+//     background-image: linear-gradient(to right, #454545 0, #9a9a9a 100%);
+//     -webkit-background-clip: text;
+//     color: transparent
+//   }
+// }

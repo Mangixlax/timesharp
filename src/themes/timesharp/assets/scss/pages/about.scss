@@ -39,6 +39,8 @@
     color: #f05321;
   }
 }
+
+
 .about-numbers.about-numbers--color {
   background-color: #f0f3f5
 }
@@ -99,7 +101,7 @@
 .content__table {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 500px;
   grid-gap: 12px;
   padding: 24px 0;
 
@@ -118,6 +120,19 @@
     font-weight: 600;
   }
 
+  &-cell {
+    text-align: end;
+
+    a {
+      text-decoration: none;
+      color:#f05321;
+    }
+  }
+  
+  &-strong {
+    color:#f05321 !important;
+    font-weight: 600;
+  }
 }
 @media only screen and (max-width:959px) {
   .page-about__hat {
@@ -163,5 +178,9 @@
 
   .about-numbers__col {
     width: 50%
+  }
+
+  .page-content__tg-table-cell--mobile {
+    display: none;
   }
 }
