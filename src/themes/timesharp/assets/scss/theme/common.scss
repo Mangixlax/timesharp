@@ -145,7 +145,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline
 }
 
@@ -389,13 +388,13 @@ h2,
 }
 
 .more-link {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.15px;
   line-height: 50px;
   color: #fff;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .more-link.more-link--black {

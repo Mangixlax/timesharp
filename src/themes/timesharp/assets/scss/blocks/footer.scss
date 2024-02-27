@@ -19,7 +19,7 @@
 }
 
 .page-footer__year {
-  color: #92989b;
+  color: #000000;
   margin-right: 8px;
 }
 
@@ -98,8 +98,8 @@
 
 .page-footer__nav-link {
   display: block;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: -.3px;
@@ -127,8 +127,9 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  color: #92989b;
-  font-size: 14px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
   margin-top: 37px
 }
 
@@ -198,7 +199,7 @@ html.backgroundcliptext .page-footer__socials-item:before {
 }
 
 .page-footer__policy-link {
-  color: #92989b;
+  color: #000000;
   text-decoration: none
 }
 
@@ -282,7 +283,7 @@ html.backgroundcliptext .page-footer__socials-item:before {
 .sitemap__footer-link {
   display: block;
   margin-right: 20px;
-  color: #92989b;
+  color: #000000;
   text-decoration: none;
   -webkit-transition: all .2s ease;
   -o-transition: all .2s ease;
