@@ -34,6 +34,10 @@ $assets-url: "../../assets";
   background-color: #fff;
   position: relative;
   z-index: 2;
+
+  .uk-modal-page & {
+    overflow: auto;
+  }
 }
 
 .header-navbar__mobile-nav {

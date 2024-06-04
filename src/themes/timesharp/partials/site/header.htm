@@ -178,6 +178,12 @@
                         </a>
                     </li>
                     <li class="header-navbar__nav-item">
+                        <a href="{{ 'contacts'|page }}"
+                            class="header-navbar__nav-link {% if this.page.id == 'contacts' %} header-navbar__nav-link--active {% endif %}">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="header-navbar__nav-item">
                         <a href="{{ 'journal/index'|page }}"
                             class="header-navbar__nav-link {% if this.page.id == 'journal/index' %} header-navbar__nav-link--active {% endif %}">
                             Журнал
@@ -217,12 +223,6 @@
                         <a href="{{ 'dostavka'|page }}"
                             class="header-navbar__nav-link {% if this.page.id == 'dostavka' %} header-navbar__nav-link--active {% endif %}">
                             Доставка
-                        </a>
-                    </li>
-                    <li class="header-navbar__nav-item">
-                        <a href="{{ 'contacts'|page }}"
-                            class="header-navbar__nav-link {% if this.page.id == 'contacts' %} header-navbar__nav-link--active {% endif %}">
-                            Контакты
                         </a>
                     </li>
                 </ul>
